@@ -1,0 +1,95 @@
+// Shown when Supabase is not yet configured
+
+export const DEMO_TESTIMONIALS = [
+  {
+    id: 'demo-1',
+    name: 'Suresh Mehta',
+    location: 'Borivali West, Mumbai',
+    review: 'R.K. Electricals did our entire flat wiring. The work is super clean — not a single wire visible. Very professional team, showed up on time and finished ahead of schedule.',
+    rating: 5,
+    is_active: true,
+  },
+  {
+    id: 'demo-2',
+    name: 'Priya Nair',
+    location: 'Kandivali, Mumbai',
+    review: 'I called them for a faulty switchboard. They identified the problem in 10 minutes and fixed it safely. Honest about pricing — no hidden charges. Highly recommend!',
+    rating: 5,
+    is_active: true,
+  },
+  {
+    id: 'demo-3',
+    name: 'Arun Deshmukh',
+    location: 'Malad West, Mumbai',
+    review: 'Used their AMC service for our office. Monthly inspections keep everything running smoothly. No sudden electrical issues since we started. Worth every rupee.',
+    rating: 5,
+    is_active: true,
+  },
+  {
+    id: 'demo-4',
+    name: 'Kavita Shah',
+    location: 'Dahisar, Mumbai',
+    review: 'Our interior designer recommended R.K. Electricals for our new home. The cove lighting and chandelier installation is absolutely perfect. Very skilled workers.',
+    rating: 5,
+    is_active: true,
+  },
+  {
+    id: 'demo-5',
+    name: 'Rakesh Tiwari',
+    location: 'Borivali East, Mumbai',
+    review: 'Builder-level work done for our apartment complex — 30+ flats, all wired on time and passed inspection first attempt. Excellent coordination by Kirit Bhai.',
+    rating: 5,
+    is_active: true,
+  },
+]
+
+export const DEMO_PROJECTS = [
+  {
+    id: 'demo-p1',
+    title: 'Modern Flat Wiring — Borivali West',
+    description: 'Complete concealed wiring with modular switches for a 2BHK apartment.',
+    category: 'residential',
+    image_url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    is_active: true,
+  },
+  {
+    id: 'demo-p2',
+    title: 'Pendant Light Installation',
+    description: 'Designer pendant lighting installed for a premium interior project.',
+    category: 'residential',
+    image_url: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&q=80',
+    is_active: true,
+  },
+  {
+    id: 'demo-p3',
+    title: 'Office Electrical Setup — Kandivali',
+    description: 'Panel setup, UPS points, and LED lighting for a 1200 sq ft office.',
+    category: 'commercial',
+    image_url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+    is_active: true,
+  },
+  {
+    id: 'demo-p4',
+    title: 'Cove & Accent Lighting',
+    description: 'LED cove lighting with concealed wiring for a luxury interior.',
+    category: 'residential',
+    image_url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80',
+    is_active: true,
+  },
+  {
+    id: 'demo-p5',
+    title: 'Builder Project — 24 Flat Complex',
+    description: 'End-to-end rough-in to finish wiring for entire residential building.',
+    category: 'builder',
+    image_url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    is_active: true,
+  },
+  {
+    id: 'demo-p6',
+    title: 'AMC — Commercial Client, Malad',
+    description: 'Annual maintenance contract with quarterly inspections.',
+    category: 'amc',
+    image_url: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80',
+    is_active: true,
+  },
+]

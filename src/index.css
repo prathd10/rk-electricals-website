@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { 
+    @apply font-sans antialiased; 
+    color: #2D4A43; /* forest-800 */
+    background-color: #F2EDE9; /* pastelBrown-100 */
+  }
+}
+
+@layer components {
+  /* Layout */
+  .max-w-site { @apply max-w-7xl mx-auto; }
+  .pad        { @apply px-8 lg:px-16; }
+
+  /* Typography */
+  .h1 { @apply font-serif text-5xl md:text-8xl leading-[1.05] tracking-tight; }
+  .h2 { @apply font-serif text-4xl md:text-6xl leading-tight; }
+  
+  /* Buttons */
+  .btn-outline {
+    @apply inline-flex items-center justify-center font-sans font-bold uppercase tracking-widest text-[10px]
+           border border-[#2D4A43] px-6 py-3
+           hover:bg-[#2D4A43] hover:text-white transition-all duration-500;
+  }
+  
+  .btn-underline {
+    @apply relative inline-block font-sans font-bold uppercase tracking-[0.2em] text-[11px] pb-1
+           after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#2D4A43]
+           hover:after:h-[2px] transition-all;
+  }
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Image Frame */
+.arch-frame {
+  border-radius: 12rem 12rem 2rem 2rem;
+}
+
+/* Background Texture */
+.bg-pastel-gradient {
+  background: radial-gradient(circle at top left, #FAF8F6 0%, #F2EDE9 50%, #E5DDD6 100%);
+}
