@@ -26,7 +26,7 @@ export function useInView(threshold = 0.12) {
 }
 
 // Attach reveal class approach — add 'visible' when element enters viewport
-export function useReveal() {
+export function useReveal(deps = []) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export function useReveal() {
 
     targets.forEach((t) => observer.observe(t))
     return () => observer.disconnect()
-  }, [])
+  }, deps)
 
   return ref
 }

@@ -69,7 +69,7 @@ export default function Contact() {
               <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Message</label>
               <textarea rows="4" placeholder="Briefly describe your work" className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100 resize-none"></textarea>
             </div>
-            <button type="submit" className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-6 hover:bg-burnt-500 transition-all duration-500 flex items-center justify-center gap-4 group">
+            <button type="submit" className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-6 hover:bg-pastelBrown-500 transition-all duration-500 flex items-center justify-center gap-4 group">
               Submit Request
               <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
             </button>

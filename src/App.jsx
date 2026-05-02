@@ -8,12 +8,25 @@ import ProjectsAdmin  from './pages/admin/ProjectsAdmin'
 import LeadsAdmin     from './pages/admin/LeadsAdmin'
 import ProtectedRoute from './components/ProtectedRoute'
 
+import PublicLayout   from './components/public/PublicLayout'
+import Builders       from './pages/Builders'
+import Designers      from './pages/Designers'
+import About          from './pages/About'
+import ContactPage    from './pages/ContactPage'
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Public */}
-        <Route path="/" element={<Home />} />
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/builders" element={<Builders />} />
+          <Route path="/designers" element={<Designers />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
+        
         <Route path="/login" element={<Login />} />
 
         {/* Admin (protected) */}

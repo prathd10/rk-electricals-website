@@ -18,6 +18,7 @@ export default {
           100: '#F2EDE9', // light tint for bg
           200: '#E5DDD6',
           300: '#D1C4B9',
+          400: '#C5B6AA',
           500: '#B2A08F', // main pastel brown
           600: '#968372',
           800: '#5C5046', // deep taupe

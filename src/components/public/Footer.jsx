@@ -29,10 +29,12 @@ export default function Footer() {
         <div className="space-y-10">
           <h4 className="text-[10px] font-bold uppercase tracking-widest opacity-30">Quick Links</h4>
           <ul className="space-y-6 text-sm">
-            <li><a href="#services" className="hover:text-burnt-400 transition-colors">Services</a></li>
-            <li><a href="#gallery" className="hover:text-burnt-400 transition-colors">Portfolio</a></li>
-            <li><a href="#testimonials" className="hover:text-burnt-400 transition-colors">Reviews</a></li>
-            <li><a href="#contact" className="hover:text-burnt-400 transition-colors">Contact</a></li>
+            <li><a href="/#services" className="hover:text-pastelBrown-400 transition-colors">Services</a></li>
+            <li><a href="/#gallery" className="hover:text-pastelBrown-400 transition-colors">Portfolio</a></li>
+            <li><a href="/about" className="hover:text-pastelBrown-400 transition-colors">About Us</a></li>
+            <li><a href="/builders" className="hover:text-pastelBrown-400 transition-colors">Builders & Developers</a></li>
+            <li><a href="/designers" className="hover:text-pastelBrown-400 transition-colors">Interior Designers</a></li>
+            <li><a href="/contact" className="hover:text-pastelBrown-400 transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
@@ -52,9 +54,9 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-site pad pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10 text-[10px] uppercase tracking-[0.2em] opacity-20">
+      <div className="max-w-site pad pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.2em] opacity-20">
         <p>© {new Date().getFullYear()} R.K. Electricals. All Rights Reserved.</p>
-        <p>Curated by Antigravity</p>
+        <p>Website Developed by Synex AI</p>
       </div>
     </footer>
   )

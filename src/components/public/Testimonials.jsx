@@ -46,8 +46,8 @@ export default function Testimonials() {
             </h2>
             <div className="mt-6 flex items-center gap-3 reveal d-200">
               <div className="flex gap-1">
-                {[...Array(4)].map((_, i) => <Star key={i} size={16} fill="#A65D37" className="text-burnt-500" />)}
-                <Star size={16} fill="#A65D37" className="text-burnt-500 opacity-50" />
+                {[...Array(4)].map((_, i) => <Star key={i} size={16} fill="#B2A08F" className="text-pastelBrown-500" />)}
+                <Star size={16} fill="#B2A08F" className="text-pastelBrown-500 opacity-50" />
               </div>
               <span className="font-bold text-forest-800">4.5 / 5.0</span>
               <span className="text-forest-600 text-sm">(22 Google Reviews)</span>
@@ -59,7 +59,7 @@ export default function Testimonials() {
               href="https://www.google.com/search?q=R+K+Electricals+Borivali+West" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 bg-forest-800 px-10 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white hover:bg-burnt-500 transition-all duration-500 shadow-xl shadow-forest-800/20"
+              className="inline-flex items-center gap-4 bg-forest-800 px-10 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white hover:bg-pastelBrown-500 transition-all duration-500 shadow-xl shadow-forest-800/20"
             >
               Drop a Review on Google <ExternalLink size={14} />
             </a>
@@ -73,7 +73,7 @@ export default function Testimonials() {
           {[...REVIEWS, ...REVIEWS].map((r, i) => (
             <div 
               key={`${r.name}-${i}`} 
-              className="inline-block w-[400px] bg-white p-12 shadow-sm border border-pastelBrown-100 relative group shrink-0"
+              className="inline-block w-[320px] md:w-[400px] bg-white p-8 md:p-12 shadow-sm border border-pastelBrown-100 relative group shrink-0"
             >
               <Quote className="absolute top-10 right-10 text-pastelBrown-100" size={32} strokeWidth={1} />
               
