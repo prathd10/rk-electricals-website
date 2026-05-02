@@ -29,7 +29,7 @@ export default function Gallery() {
   )
 
   return (
-    <section id="gallery" className="py-32 bg-white" ref={ref}>
+    <section id="gallery" className="pt-20 pb-32 bg-white" ref={ref}>
       <div className="max-w-site pad">
 
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12 mb-24">

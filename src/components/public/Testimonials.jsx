@@ -33,11 +33,11 @@ export default function Testimonials() {
   const ref = useReveal()
 
   return (
-    <section id="testimonials" className="py-32 bg-cream-50 overflow-hidden" ref={ref}>
+    <section id="testimonials" className="pt-24 pb-0 bg-cream-50 overflow-hidden" ref={ref}>
       <div className="max-w-site pad mb-16">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <div className="max-w-xl">
             <span className="text-forest-600 font-sans font-bold uppercase tracking-[0.3em] text-[10px] reveal d-0">Voices of Trust</span>
             <h2 className="h2 mt-8 text-forest-800 reveal d-100">
@@ -53,8 +53,8 @@ export default function Testimonials() {
               <span className="text-forest-600 text-sm">(22 Google Reviews)</span>
             </div>
           </div>
-          <div className="reveal d-200 text-center md:text-right">
-            <p className="text-forest-800 font-bold mb-4 italic text-lg">"Your feedback powers our excellence."</p>
+          <div className="reveal d-200 text-left">
+            <p className="text-forest-800 font-bold mb-4 italic text-lg whitespace-nowrap">"Your feedback powers our excellence."</p>
             <a 
               href="https://www.google.com/search?q=R+K+Electricals+Borivali+West" 
               target="_blank" 

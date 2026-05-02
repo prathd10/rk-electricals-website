@@ -5,8 +5,8 @@ export default function ContactPage() {
   const ref = useReveal()
 
   return (
-    <div className="pt-32 bg-tan-50 min-h-screen flex flex-col justify-center" ref={ref}>
-      <section className="py-20 pad">
+    <div className="pt-20 bg-tan-50 min-h-screen" ref={ref}>
+      <section className="pt-8 pb-20 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-24 items-center">
           
           {/* Info Side */}

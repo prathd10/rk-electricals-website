@@ -8,7 +8,7 @@ export default function TrustSection() {
   const ref = useReveal()
 
   return (
-    <section className="py-20 bg-white" ref={ref}>
+    <section className="pt-20 pb-0 bg-white" ref={ref}>
       <div className="max-w-site pad">
         <div className="text-center mb-12">
           <span className="text-[10px] font-black uppercase tracking-[0.3em] text-forest-600 opacity-40 reveal d-0">Preferred Partners</span>

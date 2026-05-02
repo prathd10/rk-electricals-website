@@ -5,8 +5,8 @@ export default function Designers() {
   const ref = useReveal()
 
   return (
-    <div className="pt-32 bg-cream-50 min-h-screen flex flex-col justify-center overflow-hidden" ref={ref}>
-      <section className="py-12 pad">
+    <div className="pt-20 bg-cream-50 min-h-screen overflow-hidden" ref={ref}>
+      <section className="pt-8 pb-12 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Pitch Side */}

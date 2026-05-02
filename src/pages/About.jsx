@@ -5,9 +5,9 @@ export default function About() {
   const ref = useReveal()
 
   return (
-    <div className="pt-32 bg-tan-50 min-h-screen" ref={ref}>
+    <div className="pt-24 bg-tan-50 min-h-screen" ref={ref}>
       {/* Hero Section */}
-      <section className="py-20 pad">
+      <section className="pt-12 pb-20 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <span className="text-forest-600 font-sans font-bold uppercase tracking-[0.3em] text-[10px] reveal d-0">Our Legacy</span>

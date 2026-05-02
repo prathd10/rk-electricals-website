@@ -9,7 +9,9 @@ export default function Hero() {
       style={{ backgroundImage: "url('/images/hero_interior_bg.png')" }}
       ref={ref}
     >
-      
+      {/* Top Shadow for Navbar Visibility */}
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/20 to-transparent pointer-events-none"></div>
+
       <div className="relative z-10 w-full flex justify-start">
         
         {/* Left: Content */}

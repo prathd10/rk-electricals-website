@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
@@ -11,6 +12,8 @@ const NAV_LINKS = [
 ]
 
 export default function Header() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -19,6 +22,8 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const isLightText = isScrolled || isHomePage
 
   return (
     <>
@@ -30,8 +35,7 @@ export default function Header() {
           
           {/* Logo */}
           <a href="/" className="flex items-center gap-4 group">
-            <span className={`font-serif text-2xl tracking-tight transition-colors duration-500 
-                              ${isScrolled ? 'text-white' : 'text-forest-800'}`}>
+            <span className={`font-serif text-2xl tracking-tight transition-colors duration-500 ${isLightText ? 'text-white' : 'text-forest-800'}`}>
               RK ELECTRICALS
             </span>
           </a>
@@ -43,7 +47,7 @@ export default function Header() {
                 key={link.name} 
                 href={link.href}
                 className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-500
-                ${isScrolled ? 'text-white/80 hover:text-white' : 'text-forest-800/60 hover:text-forest-800'}`}
+                ${isLightText ? 'text-white/80 hover:text-white' : 'text-forest-800/60 hover:text-forest-800'}`}
               >
                 {link.name}
               </a>
@@ -56,9 +60,9 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X className={isScrolled ? 'text-white' : 'text-forest-800'} size={24} />
+              <X className={isLightText ? 'text-white' : 'text-forest-800'} size={24} />
             ) : (
-              <Menu className={isScrolled ? 'text-white' : 'text-forest-800'} size={24} />
+              <Menu className={isLightText ? 'text-white' : 'text-forest-800'} size={24} />
             )}
           </button>
 
