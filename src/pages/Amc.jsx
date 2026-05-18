@@ -96,12 +96,14 @@ export default function Amc() {
           {/* Form Side */}
           <div className="reveal d-200 bg-white p-10 lg:p-14 shadow-2xl rounded-2xl border border-forest-800/5">
             {submitted ? (
-              <div className="text-center py-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-forest-50 text-forest-600 mb-6">
-                  <ShieldCheck size={36} />
+              <div className="text-center py-16 animate-fade-in">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-forest-50 text-forest-600 mb-8 shadow-inner border border-forest-100/50 relative">
+                  <span className="absolute inset-0 rounded-full bg-forest-100/30 animate-ping"></span>
+                  <ShieldCheck size={40} className="relative z-10 text-forest-800" />
                 </div>
-                <h2 className="font-serif text-3xl text-forest-800 mb-4">Thank You!</h2>
-                <p className="text-forest-800/60 max-w-sm mx-auto leading-relaxed text-sm">
+                <h2 className="font-serif text-4xl text-forest-800 mb-4 leading-tight">Thank You!</h2>
+                <div className="h-[2px] w-12 bg-pastelBrown-500 mx-auto mb-6"></div>
+                <p className="text-forest-800/70 max-w-sm mx-auto leading-relaxed text-sm font-sans font-medium">
                   We have received your AMC inquiry. Our senior supervisor will contact you shortly to coordinate a site visit and layout assessment.
                 </p>
               </div>

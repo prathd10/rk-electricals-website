@@ -1,8 +1,41 @@
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight, MessageCircle } from 'lucide-react'
+import { useState } from 'react'
+import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2 } from 'lucide-react'
 import { useReveal } from '../hooks/useInView'
+import { useCreateLead } from '../hooks/useLeads'
+import toast from 'react-hot-toast'
 
 export default function ContactPage() {
   const ref = useReveal()
+  const createLead = useCreateLead()
+  const [submitted, setSubmitted] = useState(false)
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    serviceType: 'General Repair',
+    message: ''
+  })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!formData.name || !formData.phone) {
+      toast.error('Please enter your name and phone number')
+      return
+    }
+
+    try {
+      await createLead.mutateAsync({
+        name: formData.name,
+        phone: formData.phone,
+        service_type: formData.serviceType,
+        message: formData.message || 'N/A'
+      })
+      toast.success('Inquiry submitted successfully!')
+      setSubmitted(true)
+    } catch (err) {
+      // Error handled by react-query
+    }
+  }
 
   return (
     <div className="pt-20 bg-tan-50 min-h-screen" ref={ref}>
@@ -49,7 +82,7 @@ export default function ContactPage() {
                   <Mail size={12} /> Email
                 </h4>
                 <p className="font-serif text-xl text-forest-800">
-                  <a href="mailto:rkelectricals707@gmail.com" className="hover:text-forest-600 transition-colors">rkelectricals707@gmail.com</a>
+                  <a href="mailto:support.rkelectricals@gmail.com" className="hover:text-forest-600 transition-colors">support.rkelectricals@gmail.com</a>
                 </p>
               </div>
 
@@ -58,7 +91,7 @@ export default function ContactPage() {
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
                   <Clock size={12} /> Shop Hours
                 </h4>
-                <p className="font-serif text-xl text-forest-800">10 AM — 8 PM</p>
+                <p className="font-serif text-xl text-forest-800">10 AM — 7 PM</p>
                 <p className="text-sm text-forest-800/60">Monday to Saturday</p>
               </div>
 
@@ -73,77 +106,85 @@ export default function ContactPage() {
                   Borivali West, Mumbai 400091
                 </p>
               </div>
-
-              {/* Payment & Banking Details */}
-              <div className="sm:col-span-2 space-y-4 pt-6 border-t border-forest-800/10">
-                <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
-                  Bank Transfer Details (NEFT/RTGS)
-                </h4>
-                <div className="grid grid-cols-2 gap-4 text-xs bg-white/40 p-4 rounded-xl border border-forest-800/5 shadow-sm">
-                  <div>
-                    <span className="text-[10px] uppercase text-forest-600 font-bold">Bank Name</span>
-                    <p className="font-semibold text-forest-800">Karur Vysya Bank</p>
-                    <span className="text-[9px] text-forest-800/40">MUMBAI BORIVALI</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase text-forest-600 font-bold">IFSC Code</span>
-                    <p className="font-semibold text-forest-800">KVBL0002106</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase text-forest-600 font-bold">Account Name</span>
-                    <p className="font-semibold text-forest-800 font-serif">R K ELECTRICALS</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase text-forest-600 font-bold">Account No.</span>
-                    <p className="font-semibold text-forest-800">2106115000001458</p>
-                  </div>
-                  <div className="col-span-2 border-t border-forest-800/5 pt-2 mt-1 flex justify-between items-center">
-                    <div>
-                      <span className="text-[10px] uppercase text-forest-600 font-bold">Official UPI ID</span>
-                      <p className="font-semibold text-forest-800">rkelectricals@kvb</p>
-                    </div>
-                    <div className="text-right">
-                      <span className="text-[9px] bg-forest-800/10 text-forest-800 px-2 py-0.5 rounded-full font-bold uppercase">GPAY NO</span>
-                      <p className="font-semibold text-forest-800 text-xs mt-0.5">9920249933</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Form Side */}
           <div className="reveal d-200 bg-white p-12 lg:p-16 shadow-2xl rounded-3xl border border-forest-800/5">
-            <h2 className="font-serif text-3xl text-forest-800 mb-10">Send a Message.</h2>
-            <form className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Full Name</label>
-                  <input type="text" placeholder="John Doe" className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" />
+            {submitted ? (
+              <div className="text-center py-16 animate-fade-in">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-forest-50 text-forest-600 mb-8 shadow-inner border border-forest-100/50 relative">
+                  <span className="absolute inset-0 rounded-full bg-forest-100/30 animate-ping"></span>
+                  <CheckCircle2 size={40} className="relative z-10 text-forest-800" />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Phone Number</label>
-                  <input type="tel" placeholder="+91 98765 43210" className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" />
-                </div>
+                <h2 className="font-serif text-4xl text-forest-800 mb-4 leading-tight">Message Sent!</h2>
+                <div className="h-[2px] w-12 bg-pastelBrown-500 mx-auto mb-6"></div>
+                <p className="text-forest-800/70 max-w-sm mx-auto leading-relaxed text-sm font-sans font-medium">
+                  Thank you for reaching out. We have received your message and will get back to you shortly.
+                </p>
               </div>
-              <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Service Required</label>
-                <select className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg cursor-pointer">
-                  <option>General Repair</option>
-                  <option>New Installation</option>
-                  <option>AMC / Maintenance</option>
-                  <option>Shop Inquiry</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Message</label>
-                <textarea rows="3" placeholder="How can we help?" className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg resize-none"></textarea>
-              </div>
-              <button className="w-full bg-forest-800 text-white py-6 font-bold uppercase tracking-widest text-[12px] hover:bg-pastelBrown-500 transition-all flex items-center justify-center gap-4">
-                Send Request <Send size={16} />
-              </button>
-            </form>
+            ) : (
+              <>
+                <h2 className="font-serif text-3xl text-forest-800 mb-10">Send a Message.</h2>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
+                      <input 
+                        type="text" 
+                        required
+                        placeholder="John Doe" 
+                        value={formData.name}
+                        onChange={e => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" 
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Phone Number *</label>
+                      <input 
+                        type="tel" 
+                        required
+                        placeholder="+91 98765 43210" 
+                        value={formData.phone}
+                        onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" 
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Service Required</label>
+                    <select 
+                      value={formData.serviceType}
+                      onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
+                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg cursor-pointer"
+                    >
+                      <option value="General Repair">General Repair</option>
+                      <option value="New Installation">New Installation</option>
+                      <option value="AMC / Maintenance">AMC / Maintenance</option>
+                      <option value="Shop Inquiry">Shop Inquiry</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Message</label>
+                    <textarea 
+                      rows="3" 
+                      placeholder="How can we help?" 
+                      value={formData.message}
+                      onChange={e => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg resize-none"
+                    ></textarea>
+                  </div>
+                  <button 
+                    type="submit"
+                    disabled={createLead.isPending}
+                    className="w-full bg-forest-800 text-white py-6 font-bold uppercase tracking-widest text-[12px] hover:bg-pastelBrown-500 transition-all flex items-center justify-center gap-4 disabled:opacity-55 disabled:cursor-not-allowed shadow-lg rounded-sm"
+                  >
+                    {createLead.isPending ? 'Sending...' : 'Send Request'} <Send size={16} />
+                  </button>
+                </form>
+              </>
+            )}
           </div>
 
         </div>

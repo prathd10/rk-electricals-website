@@ -47,11 +47,25 @@ npm install
 
 ### 3b. Get Your Keys
 1. Dashboard → **Developer** → **API Keys**
-2. Copy **URL Endpoint**, **Public Key**, and **Private Key**
+2. Copy **URL Endpoint**, **Public Key**, and **Private Key** (keep the Private Key highly secure!)
 
-### 3c. Auth Endpoint (Required for File Uploads)
-ImageKit requires a server-side auth token. For production, add a backend endpoint.
-For simple setups, just paste ImageKit URLs directly in the admin panel — no upload needed.
+### 3c. Set Up Secure Media Upload Auth (Supabase Edge Function)
+To authorize client-side image uploads securely to ImageKit, the project includes a Supabase Edge Function that acts as the serverless authentication endpoint:
+1. Make sure you have the Supabase CLI installed on your machine.
+2. Link your Supabase project in the terminal:
+   ```bash
+   supabase login
+   supabase link --project-ref your-project-ref-id
+   ```
+3. Set your ImageKit Private Key securely in Supabase Secrets:
+   ```bash
+   supabase secrets set IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
+   ```
+4. Deploy the authentication Edge Function:
+   ```bash
+   supabase functions deploy imagekit-auth
+   ```
+This activates direct, secure file uploading inside your R.K. Electricals website dashboard!
 
 ---
 

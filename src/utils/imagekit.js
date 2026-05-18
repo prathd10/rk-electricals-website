@@ -1,6 +1,9 @@
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
+
 export const imagekitConfig = {
   urlEndpoint: import.meta.env.VITE_IMAGEKIT_URL_ENDPOINT || '',
   publicKey:   import.meta.env.VITE_IMAGEKIT_PUBLIC_KEY || '',
+  privateKey:  import.meta.env.VITE_IMAGEKIT_PRIVATE_KEY || '',
 }
 
 export function getImageKitUrl(path, transforms = {}) {
@@ -10,20 +13,75 @@ export function getImageKitUrl(path, transforms = {}) {
   return `${base}/${path.replace(/^\//, '')}`
 }
 
+/**
+ * Generates HMAC-SHA1 signature locally in the browser using Web Crypto API.
+ * This is used as a fallback if the Supabase Edge Function is not deployed.
+ */
+async function generateLocalSignature(token, expire, privateKey) {
+  const encoder = new TextEncoder()
+  const keyData = encoder.encode(privateKey)
+  const messageData = encoder.encode(token + expire)
+
+  const cryptoKey = await window.crypto.subtle.importKey(
+    "raw",
+    keyData,
+    { name: "HMAC", hash: "SHA-1" },
+    false,
+    ["sign"]
+  )
+
+  const signatureBuffer = await window.crypto.subtle.sign("HMAC", cryptoKey, messageData)
+  
+  return Array.from(new Uint8Array(signatureBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("")
+}
+
 export async function uploadToImageKit(file, folder = 'rk-electricals') {
+  if (!imagekitConfig.publicKey || !imagekitConfig.urlEndpoint) {
+    throw new Error('ImageKit public key or URL endpoint is missing in your .env variables.')
+  }
+
+  const token = window.crypto.randomUUID()
+  const expire = Math.floor(Date.now() / 1000) + 600 // 10 minutes expiry
+
+  let signature = ''
+
+  // 1. Try to generate signature via Supabase Edge Function first
+  if (isSupabaseConfigured) {
+    try {
+      const { data: auth, error } = await supabase.functions.invoke('imagekit-auth')
+      if (!error && auth?.signature) {
+        signature = auth.signature
+      }
+    } catch (err) {
+      console.warn("Supabase Edge Function 'imagekit-auth' is not deployed or not accessible. Falling back to local signature generation...", err)
+    }
+  }
+
+  // 2. If Edge Function failed or is not deployed, try local signature generation
+  if (!signature) {
+    if (!imagekitConfig.privateKey) {
+      throw new Error(
+        "Upload failed: The Supabase Edge Function 'imagekit-auth' is not deployed, AND 'VITE_IMAGEKIT_PRIVATE_KEY' is missing in your local .env file. Please add your ImageKit Private Key to your .env file as VITE_IMAGEKIT_PRIVATE_KEY to enable local uploads!"
+      );
+    }
+    
+    try {
+      signature = await generateLocalSignature(token, expire, imagekitConfig.privateKey)
+    } catch (err) {
+      throw new Error(`Failed to generate local upload signature: ${err.message}`)
+    }
+  }
+
   const formData = new FormData()
   formData.append('file', file)
   formData.append('fileName', file.name)
   formData.append('folder', folder)
   formData.append('publicKey', imagekitConfig.publicKey)
-
-  const authResp = await fetch('/api/imagekit-auth')
-  if (!authResp.ok) throw new Error('ImageKit auth failed — ensure server auth endpoint is configured')
-  const auth = await authResp.json()
-
-  formData.append('signature', auth.signature)
-  formData.append('expire',    auth.expire)
-  formData.append('token',     auth.token)
+  formData.append('signature', signature)
+  formData.append('expire', String(expire))
+  formData.append('token', token)
 
   const resp = await fetch('https://upload.imagekit.io/api/v1/files/upload', {
     method: 'POST',

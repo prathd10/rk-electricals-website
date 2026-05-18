@@ -86,9 +86,9 @@ export const DEMO_PROJECTS = [
   },
   {
     id: 'demo-p6',
-    title: 'AMC — Premium Retail Complex',
-    description: '24/7 priority maintenance and quarterly safety audits for high-traffic retail spaces.',
-    category: 'amc',
+    title: 'Bespoke Lighting Design Integration',
+    description: 'Custom lighting layouts, designer light fixtures, and smart dimming automation.',
+    category: 'designer',
     image_url: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80',
     is_active: true,
   },

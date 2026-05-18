@@ -21,13 +21,30 @@ createRoot(document.getElementById('root')).render(
       <Toaster
         position="top-right"
         toastOptions={{
-          duration: 3500,
+          duration: 4000,
           style: {
-            background: '#0F1F3D',
-            color: '#fff',
-            borderRadius: '10px',
+            background: '#2D4A43', // Premium Forest Green
+            color: '#FAF8F6',      // Warm Cream
+            border: '1px solid rgba(139, 167, 157, 0.2)', // Soft Forest outline
+            borderRadius: '12px',
+            fontFamily: '"Plus Jakarta Sans", sans-serif',
+            fontSize: '14px',
+            fontWeight: '600',
+            padding: '16px 24px',
+            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
           },
-          success: { iconTheme: { primary: '#F59E0B', secondary: '#fff' } },
+          success: { 
+            iconTheme: { 
+              primary: '#B2A08F',   // Pastel Brown Accent
+              secondary: '#2D4A43'  // Forest Green Background
+            } 
+          },
+          error: { 
+            iconTheme: { 
+              primary: '#A65D37',   // Burnt Orange Accent
+              secondary: '#FAF8F6' 
+            } 
+          },
         }}
       />
     </QueryClientProvider>

@@ -58,7 +58,7 @@ export default function Footer() {
             <li>
               <span className="text-[9px] uppercase tracking-wider block opacity-40">Landline & Email</span>
               <span>022 2833 7226</span><br />
-              <a href="mailto:rkelectricals707@gmail.com" className="hover:text-pastelBrown-400 transition-colors font-semibold">rkelectricals707@gmail.com</a>
+              <a href="mailto:support.rkelectricals@gmail.com" className="hover:text-pastelBrown-400 transition-colors font-semibold">support.rkelectricals@gmail.com</a>
             </li>
           </ul>
         </div>

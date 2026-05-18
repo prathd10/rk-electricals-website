@@ -32,6 +32,29 @@
            after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#2D4A43]
            hover:after:h-[2px] transition-all;
   }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 font-sans font-bold uppercase tracking-[0.15em] text-[10px]
+           bg-forest-800 text-white px-5 py-3.5 rounded-xl hover:bg-forest-900 active:scale-[0.98] transition-all duration-300 shadow-md shadow-forest-800/10 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-sans font-bold uppercase tracking-[0.15em] text-[10px]
+           bg-white text-forest-800 border border-forest-800/10 px-5 py-3.5 rounded-xl hover:bg-[#faf8f5] active:scale-[0.98] transition-all duration-300 cursor-pointer;
+  }
+
+  /* Forms */
+  .label {
+    @apply text-[10px] font-sans font-bold uppercase tracking-widest text-forest-800/40 block mb-2;
+  }
+
+  .input {
+    @apply w-full bg-white border border-forest-800/10 rounded-xl py-3.5 px-4 outline-none focus:border-forest-600 focus:ring-1 focus:ring-forest-600/20 text-sm text-forest-800 transition-all duration-300;
+  }
+
+  .admin-card {
+    @apply bg-white rounded-2xl border border-forest-800/5 p-6 md:p-8 shadow-[0_12px_45px_rgba(45,74,67,0.025)] hover:shadow-[0_20px_50px_rgba(45,74,67,0.06)] transition-all duration-300;
+  }
 }
 
 /* Animations */

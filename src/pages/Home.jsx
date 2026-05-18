@@ -13,6 +13,7 @@ export default function Home() {
       <TrustSection />
       <Testimonials />
       <Gallery />
+      <Contact />
     </>
   )
 }

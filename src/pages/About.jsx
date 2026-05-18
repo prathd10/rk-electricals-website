@@ -63,6 +63,9 @@ export default function About() {
             <div className="order-1 lg:order-2 reveal d-200">
               <h2 className="h2 text-forest-800 mb-10">Technical Mastery <br /><span className="italic font-normal text-forest-600">meets Local Trust.</span></h2>
               <div className="space-y-8 text-forest-800/70 leading-relaxed">
+                <blockquote className="border-l-4 border-pastelBrown-500 pl-6 py-2 italic font-serif text-xl text-forest-800 font-medium my-8">
+                  "We hide our work so that you can showcase yours."
+                </blockquote>
                 <p>
                   At RK Electricals, we believe that electrical work is the invisible backbone of any great space. Whether it's the complex wiring of a luxury high-rise or the delicate lighting of a designer home, our approach remains the same: precision, safety, and durability.
                 </p>
@@ -99,35 +102,6 @@ export default function About() {
         <div className="absolute top-0 left-0 w-full h-full bg-forest-900/20 pointer-events-none" />
       </section>
 
-      {/* Visit Us */}
-      <section className="py-32 bg-white">
-        <div className="max-w-site pad mx-auto">
-          <div className="bg-tan-100 p-12 lg:p-20 flex flex-col lg:flex-row gap-20 items-center">
-            <div className="flex-1">
-              <MapPin className="text-forest-600 mb-8" size={40} />
-              <h2 className="h2 text-forest-800 mb-8">Visit our legacy <br /><span className="italic font-normal text-forest-600">showroom.</span></h2>
-              <p className="text-forest-800/60 mb-12 max-w-md">
-                Experience our range of premium switches, lighting solutions, and smart home hardware at our landmark Borivali West location.
-              </p>
-              <a 
-                href="https://www.google.com/maps/search/Surya+Kiran+Baburao+Paranjape+Marg+Borivali+West+Mumbai+400092" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-underline"
-              >
-                Get Directions to Surya Kiran
-              </a>
-            </div>
-            <div className="flex-1 w-full aspect-square lg:aspect-video bg-forest-800 rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" 
-                alt="Electrical Showroom" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

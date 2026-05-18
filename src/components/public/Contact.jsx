@@ -1,8 +1,41 @@
-import { Mail, MapPin, Phone, Send, MessageCircle } from 'lucide-react'
+import { useState } from 'react'
+import { Mail, MapPin, Phone, Send, MessageCircle, CheckCircle2 } from 'lucide-react'
 import { useReveal } from '../../hooks/useInView'
+import { useCreateLead } from '../../hooks/useLeads'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
   const ref = useReveal()
+  const createLead = useCreateLead()
+  const [submitted, setSubmitted] = useState(false)
+
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    serviceType: 'New Wiring / Setup',
+    message: ''
+  })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (!formData.name || !formData.phone) {
+      toast.error('Please enter your name and contact number')
+      return
+    }
+
+    try {
+      await createLead.mutateAsync({
+        name: formData.name,
+        phone: formData.phone,
+        service_type: formData.serviceType,
+        message: formData.message || 'N/A'
+      })
+      toast.success('Request submitted successfully!')
+      setSubmitted(true)
+    } catch (err) {
+      // Error handled by react-query
+    }
+  }
 
   return (
     <section id="contact" className="py-32 bg-cream-100" ref={ref}>
@@ -47,7 +80,7 @@ export default function Contact() {
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">Email</div>
                 <div className="text-xl font-serif text-forest-800">
-                  <a href="mailto:rkelectricals707@gmail.com" className="hover:text-forest-600 transition-colors">rkelectricals707@gmail.com</a>
+                  <a href="mailto:support.rkelectricals@gmail.com" className="hover:text-forest-600 transition-colors">support.rkelectricals@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -69,33 +102,75 @@ export default function Contact() {
 
         {/* Form */}
         <div className="reveal d-200 bg-white p-12 lg:p-16 shadow-2xl">
-          <form className="space-y-10">
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Full Name</label>
-              <input type="text" placeholder="Your Name" className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" />
+          {submitted ? (
+            <div className="text-center py-20 animate-fade-in">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-forest-50 text-forest-600 mb-8 shadow-inner border border-forest-100/50 relative">
+                <span className="absolute inset-0 rounded-full bg-forest-100/30 animate-ping"></span>
+                <CheckCircle2 size={40} className="relative z-10 text-forest-800" />
+              </div>
+              <h3 className="font-serif text-4xl text-forest-800 mb-4 leading-tight">Request Submitted!</h3>
+              <div className="h-[2px] w-12 bg-pastelBrown-500 mx-auto mb-6"></div>
+              <p className="text-forest-800/70 max-w-sm mx-auto leading-relaxed text-sm font-sans font-medium">
+                Thank you. We have received your query and a team member will contact you shortly.
+              </p>
             </div>
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Contact Number</label>
-              <input type="tel" placeholder="Mobile number" className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" />
-            </div>
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Service Required</label>
-              <select className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl appearance-none">
-                <option>New Wiring / Setup</option>
-                <option>Society AMC Contract</option>
-                <option>Gadget / Appliance Repair</option>
-                <option>Equipment Inquiry</option>
-              </select>
-            </div>
-            <div className="space-y-4">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600">Message</label>
-              <textarea rows="4" placeholder="Briefly describe your work" className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100 resize-none"></textarea>
-            </div>
-            <button type="submit" className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-6 hover:bg-pastelBrown-500 transition-all duration-500 flex items-center justify-center gap-4 group">
-              Submit Request
-              <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-            </button>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-10">
+              <div className="space-y-4">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
+                <input 
+                  type="text" 
+                  required
+                  placeholder="Your Name" 
+                  value={formData.name}
+                  onChange={e => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" 
+                />
+              </div>
+              <div className="space-y-4">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Contact Number *</label>
+                <input 
+                  type="tel" 
+                  required
+                  placeholder="Mobile number" 
+                  value={formData.phone}
+                  onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" 
+                />
+              </div>
+              <div className="space-y-4">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Service Required</label>
+                <select 
+                  value={formData.serviceType}
+                  onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
+                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl cursor-pointer"
+                >
+                  <option value="New Wiring / Setup">New Wiring / Setup</option>
+                  <option value="Society AMC Contract">Society AMC Contract</option>
+                  <option value="Gadget / Appliance Repair">Gadget / Appliance Repair</option>
+                  <option value="Equipment Inquiry">Equipment Inquiry</option>
+                </select>
+              </div>
+              <div className="space-y-4">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Message</label>
+                <textarea 
+                  rows="4" 
+                  placeholder="Briefly describe your work" 
+                  value={formData.message}
+                  onChange={e => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100 resize-none"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                disabled={createLead.isPending}
+                className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-6 hover:bg-pastelBrown-500 transition-all duration-500 flex items-center justify-center gap-4 group disabled:opacity-55 disabled:cursor-not-allowed"
+              >
+                {createLead.isPending ? 'Submitting...' : 'Submit Request'}
+                <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+              </button>
+            </form>
+          )}
         </div>
 
       </div>
