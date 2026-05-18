@@ -24,11 +24,9 @@ export default function Sidebar({ onClose }) {
       {/* Logo */}
       <div className="flex items-center justify-between p-5 border-b border-white/5">
         <div className="flex items-center gap-2.5">
-          {/* Official Lightning Bolt symbol */}
-          <div className="w-9 h-9 bg-pastelBrown-500 rounded-xl flex items-center justify-center shadow-md">
-            <svg className="w-4.5 h-4.5 fill-current text-white" viewBox="0 0 32 32">
-              <path d="M18 4L10 18h8l-4 10 12-14h-8l4-10z" />
-            </svg>
+          {/* Official Brand Logo */}
+          <div className="w-9 h-9 rounded-xl overflow-hidden shadow-md">
+            <img src="/logo.png" alt="RK Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="font-serif text-sm tracking-wide leading-tight">RK Admin</div>

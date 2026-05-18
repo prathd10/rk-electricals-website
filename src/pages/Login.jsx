@@ -31,11 +31,9 @@ export default function Login() {
       
       {/* ================= OFFICIAL BRAND LOGO AREA ================= */}
       <div className="flex flex-col items-center mb-10 select-none">
-        {/* Official Brand Lightning Bolt SVG from favicon.svg */}
-        <div className="w-16 h-16 bg-[#faf8f5] border border-forest-100 text-forest-800 rounded-2xl flex items-center justify-center shadow-[0_4px_12px_rgba(45,74,67,0.05)] mb-4">
-          <svg className="w-7 h-7 fill-current text-forest-800" viewBox="0 0 32 32">
-            <path d="M18 4L10 18h8l-4 10 12-14h-8l4-10z" />
-          </svg>
+        {/* Official Brand Logo */}
+        <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(45,74,67,0.05)] mb-4">
+          <img src="/logo.png" alt="RK Electricals Logo" className="w-full h-full object-cover" />
         </div>
         <span className="font-serif text-2xl tracking-tight text-forest-800 uppercase">
           RK ELECTRICALS
