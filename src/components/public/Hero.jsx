@@ -38,7 +38,7 @@ export default function Hero() {
 
           <div className="mt-8 reveal d-400">
             <a 
-              href="https://wa.me/918779979519?text=I%20need%20immediate%20electrical%20service" 
+              href="https://wa.me/919920249933?text=I%20need%20immediate%20electrical%20service" 
               className="inline-flex items-center gap-2 bg-pastelBrown-500 text-white px-6 py-3 font-bold uppercase tracking-widest text-[8px] hover:bg-pastelBrown-600 transition-all shadow-xl rounded-sm"
             >
               <span className="relative flex h-1.5 w-1.5">

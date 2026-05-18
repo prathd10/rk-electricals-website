@@ -5,9 +5,9 @@ import { Menu, X } from 'lucide-react'
 const NAV_LINKS = [
   { name: 'Services', href: '/#services' },
   { name: 'Portfolio', href: '/#gallery' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Builders', href: '/builders' },
   { name: 'Designers', href: '/designers' },
+  { name: 'AMC Services', href: '/amc' },
+  { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
 ]
 
@@ -104,7 +104,7 @@ export default function Header() {
           {/* Footer of Drawer */}
           <div className="mt-auto pt-6">
             <a 
-              href="https://wa.me/918779979519"
+              href="https://wa.me/919920249933"
               className="block w-full bg-white text-[#B2A08F] border-2 border-[#B2A08F] text-center py-3 font-bold uppercase tracking-widest text-[10px] shadow-xl"
             >
               Request Immediate Service

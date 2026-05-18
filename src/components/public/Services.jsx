@@ -20,7 +20,8 @@ const SERVICES = [
   {
     icon: ClipboardCheck, title: 'AMC Contracts',
     desc: 'Comprehensive electrical maintenance for residential societies and offices.',
-    bg: 'bg-forest-50', accent: 'text-pastelBrown-500'
+    bg: 'bg-forest-50', accent: 'text-pastelBrown-500',
+    link: '/amc'
   }
 ]
 
@@ -54,7 +55,7 @@ export default function Services() {
                 </div>
                 <h3 className="font-serif text-lg md:text-xl mb-2 md:mb-4 text-forest-800">{s.title}</h3>
                 <p className="text-forest-800/60 leading-relaxed mb-4 md:mb-6 text-[11px] md:text-[13px]">{s.desc}</p>
-                <a href="/contact" className="inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-forest-800 group-hover:text-pastelBrown-500 transition-colors">
+                <a href={s.link || "/contact"} className="inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-forest-800 group-hover:text-pastelBrown-500 transition-colors">
                   Explore <ArrowRight size={12} />
                 </a>
               </div>

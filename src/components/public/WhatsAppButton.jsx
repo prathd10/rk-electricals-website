@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 
-const WA    = '+919819750137'
+const WA    = '919920249933' // Jasmine Sheth (Official WhatsApp)
 const WA_MSG = encodeURIComponent("Hi! I found your website and need electrical work done. Can you help?")
 
 export default function WhatsAppButton() {

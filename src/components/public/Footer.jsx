@@ -32,7 +32,7 @@ export default function Footer() {
             <li><a href="/#services" className="hover:text-pastelBrown-400 transition-colors">Services</a></li>
             <li><a href="/#gallery" className="hover:text-pastelBrown-400 transition-colors">Portfolio</a></li>
             <li><a href="/about" className="hover:text-pastelBrown-400 transition-colors">About Us</a></li>
-            <li><a href="/builders" className="hover:text-pastelBrown-400 transition-colors">Builders & Developers</a></li>
+            <li><a href="/amc" className="hover:text-pastelBrown-400 transition-colors">AMC Services</a></li>
             <li><a href="/designers" className="hover:text-pastelBrown-400 transition-colors">Interior Designers</a></li>
             <li><a href="/contact" className="hover:text-pastelBrown-400 transition-colors">Contact Us</a></li>
           </ul>
@@ -41,14 +41,25 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="space-y-10">
           <h4 className="text-[10px] font-bold uppercase tracking-widest opacity-30">Borivali Studio</h4>
-          <ul className="space-y-6 text-sm opacity-60">
+          <ul className="space-y-4 text-sm opacity-60">
             <li>
-              Surya Kiran, Baburao Paranjape Marg,<br />
-              Opp. Amazon, Borivali West,<br />
-              Mumbai 400091
+              Shop No. 3, Surya Kiran Society,<br />
+              Jairaj Nagar, Baburao Paranjape Marg,<br />
+              Borivali West, Mumbai 400091
             </li>
-            <li>022 2833 7226 (Landline)</li>
-            <li>+91 87799 79519 (Mobile)</li>
+            <li>
+              <span className="text-[9px] uppercase tracking-wider block opacity-40">Contact</span>
+              <a href="tel:+919779979519" className="hover:text-pastelBrown-400 transition-colors font-bold">+91 97799 79519</a>
+            </li>
+            <li>
+              <span className="text-[9px] uppercase tracking-wider block opacity-40">WhatsApp</span>
+              <a href="https://wa.me/919920249933" target="_blank" rel="noopener noreferrer" className="hover:text-pastelBrown-400 transition-colors font-bold">+91 99202 49933</a>
+            </li>
+            <li>
+              <span className="text-[9px] uppercase tracking-wider block opacity-40">Landline & Email</span>
+              <span>022 2833 7226</span><br />
+              <a href="mailto:rkelectricals707@gmail.com" className="hover:text-pastelBrown-400 transition-colors font-semibold">rkelectricals707@gmail.com</a>
+            </li>
           </ul>
         </div>
 

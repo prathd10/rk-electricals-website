@@ -9,7 +9,7 @@ import LeadsAdmin     from './pages/admin/LeadsAdmin'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import PublicLayout   from './components/public/PublicLayout'
-import Builders       from './pages/Builders'
+import Amc            from './pages/Amc'
 import Designers      from './pages/Designers'
 import About          from './pages/About'
 import ContactPage    from './pages/ContactPage'
@@ -21,7 +21,7 @@ export default function App() {
         {/* Public */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/builders" element={<Builders />} />
+          <Route path="/amc" element={<Amc />} />
           <Route path="/designers" element={<Designers />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactPage />} />

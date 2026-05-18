@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, ArrowRight, MessageCircle } from 'lucide-react'
 import { useReveal } from '../hooks/useInView'
 
 export default function ContactPage() {
@@ -21,13 +21,39 @@ export default function ContactPage() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-12">
+              {/* Calls */}
               <div className="space-y-4">
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
                   <Phone size={12} /> Call Us
                 </h4>
-                <p className="font-serif text-xl text-forest-800">+91 87799 79519</p>
-                <p className="text-sm text-forest-800/60">022 2833 7226 (Shop)</p>
+                <p className="font-serif text-xl text-forest-800">
+                  <a href="tel:+919779979519" className="hover:text-forest-600 transition-colors">+91 97799 79519</a>
+                </p>
+                <p className="text-sm text-forest-800/60">022 2833 7226 (Shop Landline)</p>
               </div>
+
+              {/* WhatsApp */}
+              <div className="space-y-4">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
+                  <MessageCircle size={12} /> WhatsApp
+                </h4>
+                <p className="font-serif text-xl text-forest-800">
+                  <a href="https://wa.me/919920249933" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
+                </p>
+                <p className="text-sm text-forest-800/60">Jasmine Sheth (Official Inquiries)</p>
+              </div>
+
+              {/* Email */}
+              <div className="space-y-4">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
+                  <Mail size={12} /> Email
+                </h4>
+                <p className="font-serif text-xl text-forest-800">
+                  <a href="mailto:rkelectricals707@gmail.com" className="hover:text-forest-600 transition-colors">rkelectricals707@gmail.com</a>
+                </p>
+              </div>
+
+              {/* Shop Hours */}
               <div className="space-y-4">
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
                   <Clock size={12} /> Shop Hours
@@ -35,14 +61,53 @@ export default function ContactPage() {
                 <p className="font-serif text-xl text-forest-800">10 AM — 8 PM</p>
                 <p className="text-sm text-forest-800/60">Monday to Saturday</p>
               </div>
+
+              {/* Location */}
               <div className="sm:col-span-2 space-y-4 pt-6">
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
                   <MapPin size={12} /> Our Location
                 </h4>
                 <p className="font-serif text-xl text-forest-800 leading-snug">
-                  Surya Kiran, Baburao Paranjape Marg,<br />
+                  Shop No. 3, Surya Kiran Society,<br />
+                  Jairaj Nagar, Baburao Paranjape Marg,<br />
                   Borivali West, Mumbai 400091
                 </p>
+              </div>
+
+              {/* Payment & Banking Details */}
+              <div className="sm:col-span-2 space-y-4 pt-6 border-t border-forest-800/10">
+                <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
+                  Bank Transfer Details (NEFT/RTGS)
+                </h4>
+                <div className="grid grid-cols-2 gap-4 text-xs bg-white/40 p-4 rounded-xl border border-forest-800/5 shadow-sm">
+                  <div>
+                    <span className="text-[10px] uppercase text-forest-600 font-bold">Bank Name</span>
+                    <p className="font-semibold text-forest-800">Karur Vysya Bank</p>
+                    <span className="text-[9px] text-forest-800/40">MUMBAI BORIVALI</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase text-forest-600 font-bold">IFSC Code</span>
+                    <p className="font-semibold text-forest-800">KVBL0002106</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase text-forest-600 font-bold">Account Name</span>
+                    <p className="font-semibold text-forest-800 font-serif">R K ELECTRICALS</p>
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase text-forest-600 font-bold">Account No.</span>
+                    <p className="font-semibold text-forest-800">2106115000001458</p>
+                  </div>
+                  <div className="col-span-2 border-t border-forest-800/5 pt-2 mt-1 flex justify-between items-center">
+                    <div>
+                      <span className="text-[10px] uppercase text-forest-600 font-bold">Official UPI ID</span>
+                      <p className="font-semibold text-forest-800">rkelectricals@kvb</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[9px] bg-forest-800/10 text-forest-800 px-2 py-0.5 rounded-full font-bold uppercase">GPAY NO</span>
+                      <p className="font-semibold text-forest-800 text-xs mt-0.5">9920249933</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

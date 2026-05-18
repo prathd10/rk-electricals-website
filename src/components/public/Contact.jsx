@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, MessageCircle } from 'lucide-react'
 import { useReveal } from '../../hooks/useInView'
 
 export default function Contact() {
@@ -17,28 +17,50 @@ export default function Contact() {
           </p>
 
           <div className="space-y-12 reveal d-300">
+            {/* Phone */}
             <div className="flex gap-8 group">
               <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><Phone size={24} strokeWidth={1.5} /></div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">Call Us</div>
-                <div className="text-xl font-serif text-forest-800">022 2833 7226</div>
-                <div className="text-sm font-sans text-forest-600 mt-1">+91 87799 79519 (WhatsApp)</div>
+                <div className="text-xl font-serif text-forest-800">
+                  <a href="tel:+919779979519" className="hover:text-forest-600 transition-colors">+91 97799 79519</a>
+                </div>
+                <div className="text-sm font-sans text-forest-600 mt-1">Kirit Sheth (Primary) · 022 2833 7226 (Landline)</div>
               </div>
             </div>
+
+            {/* WhatsApp */}
+            <div className="flex gap-8 group">
+              <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><MessageCircle size={24} strokeWidth={1.5} /></div>
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">WhatsApp</div>
+                <div className="text-xl font-serif text-forest-800">
+                  <a href="https://wa.me/919920249933" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
+                </div>
+                <div className="text-sm font-sans text-forest-600 mt-1">Jasmine Sheth (Official Inquiries)</div>
+              </div>
+            </div>
+
+            {/* Email */}
             <div className="flex gap-8 group">
               <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><Mail size={24} strokeWidth={1.5} /></div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">Email</div>
-                <div className="text-xl font-serif text-forest-800">rkelectricals.mumbai@gmail.com</div>
+                <div className="text-xl font-serif text-forest-800">
+                  <a href="mailto:rkelectricals707@gmail.com" className="hover:text-forest-600 transition-colors">rkelectricals707@gmail.com</a>
+                </div>
               </div>
             </div>
+
+            {/* Address */}
             <div className="flex gap-8 group">
               <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><MapPin size={24} strokeWidth={1.5} /></div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">Our Shop</div>
-                <div className="text-xl font-serif text-forest-800">
-                  Surya Kiran, Baburao Paranjape Marg,<br />
-                  Opp. Amazon, Borivali West, Mumbai 91
+                <div className="text-xl font-serif text-forest-800 leading-snug">
+                  Shop No. 3, Surya Kiran Society,<br />
+                  Jairaj Nagar, Baburao Paranjape Marg,<br />
+                  Borivali West, Mumbai 400091
                 </div>
               </div>
             </div>
