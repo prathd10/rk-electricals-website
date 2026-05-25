@@ -94,3 +94,27 @@ insert into projects (title, description, category, is_active) values
   ('Cove & Accent Lighting — New Home',     'Designer cove lighting with LED strips and pendant installation for interior project.','residential', true),
   ('Builder Project — 24 Flat Complex',     'End-to-end rough-in to finish wiring for entire residential building.',              'builder',     true),
   ('AMC Client — Malad Commercial',         'Annual maintenance contract with quarterly inspections and priority support.',        'amc',         true);
+
+-- ================================================================
+-- ANALYTICS VIEWS
+-- ================================================================
+
+create table if not exists analytics_views (
+  id          uuid primary key default gen_random_uuid(),
+  visitor_id  text not null,
+  path        text not null,
+  created_at  timestamptz not null default now()
+);
+
+alter table analytics_views enable row level security;
+
+-- Public can insert page views
+create policy "Public insert page views"
+  on analytics_views for insert
+  with check (true);
+
+-- Authenticated admin can read page views
+create policy "Admin select page views"
+  on analytics_views for select
+  using (auth.role() = 'authenticated');
+

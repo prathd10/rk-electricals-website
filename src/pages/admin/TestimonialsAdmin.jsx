@@ -11,6 +11,7 @@ import Modal         from '../../components/ui/Modal'
 import ConfirmDialog from '../../components/ui/ConfirmDialog'
 import StarRating    from '../../components/ui/StarRating'
 import LoadingSpinner from '../../components/ui/LoadingSpinner'
+import toast         from 'react-hot-toast'
 
 export default function TestimonialsAdmin() {
   const { data: testimonials = [], isLoading } = useTestimonials({ adminAll: true })
@@ -54,12 +55,14 @@ export default function TestimonialsAdmin() {
   const toggleActive = (t) => update.mutateAsync({ id: t.id, is_active: !t.is_active })
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8 animate-fade-in">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-forest-800/5 pb-6 gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Testimonials</h1>
-          <p className="text-gray-500 text-sm mt-1">{testimonials.length} total reviews</p>
+          <h1 className="font-serif text-3xl text-forest-800 tracking-wide">Testimonials</h1>
+          <p className="text-forest-800/40 text-[10px] font-sans font-bold uppercase tracking-widest mt-2">
+            {testimonials.length} client reviews currently managed
+          </p>
         </div>
         <button onClick={openCreate} className="btn-primary">
           <Plus size={16} />
@@ -67,69 +70,60 @@ export default function TestimonialsAdmin() {
         </button>
       </div>
 
-      {/* Table */}
+      {/* Testimonials Grid Card Layout */}
       {isLoading ? (
-        <div className="flex justify-center py-16"><LoadingSpinner /></div>
+        <div className="flex justify-center py-20"><LoadingSpinner /></div>
       ) : testimonials.length === 0 ? (
-        <div className="admin-card text-center py-16 text-gray-400">
-          <Quote size={40} className="mx-auto mb-3 opacity-30" />
-          <p className="font-medium">No testimonials yet</p>
-          <p className="text-sm mt-1">Add your first customer review</p>
+        <div className="admin-card text-center py-20 text-forest-800/40 border border-dashed border-forest-800/10">
+          <Quote size={40} className="mx-auto mb-4 opacity-30 text-forest-600" />
+          <p className="font-sans font-bold uppercase tracking-widest text-[11px]">No testimonials yet</p>
+          <p className="text-xs text-forest-800/30 mt-1">Add your first customer review above</p>
         </div>
       ) : (
-        <div className="admin-card overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-gray-100 text-left">
-                <th className="pb-3 font-semibold text-gray-500">Customer</th>
-                <th className="pb-3 font-semibold text-gray-500">Review</th>
-                <th className="pb-3 font-semibold text-gray-500">Rating</th>
-                <th className="pb-3 font-semibold text-gray-500">Status</th>
-                <th className="pb-3 font-semibold text-gray-500 text-right">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-50">
-              {testimonials.map((t) => (
-                <tr key={t.id} className="hover:bg-gray-50 transition-colors">
-                  <td className="py-3.5 pr-4">
-                    <div className="font-medium text-gray-900">{t.name}</div>
-                    {t.location && <div className="text-gray-400 text-xs">{t.location}</div>}
-                  </td>
-                  <td className="py-3.5 pr-4 max-w-xs">
-                    <p className="text-gray-600 line-clamp-2">"{t.review}"</p>
-                  </td>
-                  <td className="py-3.5 pr-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          {testimonials.map((t) => (
+            <div key={t.id} className="admin-card p-5 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+              <div className="space-y-3">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-sans font-bold text-forest-800 text-sm">{t.name}</h3>
+                    {t.location && <p className="text-forest-800/40 text-xs mt-0.5">{t.location}</p>}
+                  </div>
+                  <div className="flex-shrink-0">
                     <StarRating rating={t.rating} />
-                  </td>
-                  <td className="py-3.5 pr-4">
-                    <button onClick={() => toggleActive(t)} className="flex items-center gap-1.5 text-xs font-medium">
-                      {t.is_active ? (
-                        <><ToggleRight size={18} className="text-green-500" /><span className="text-green-600">Visible</span></>
-                      ) : (
-                        <><ToggleLeft size={18} className="text-gray-400" /><span className="text-gray-400">Hidden</span></>
-                      )}
-                    </button>
-                  </td>
-                  <td className="py-3.5">
-                    <div className="flex items-center justify-end gap-2">
-                      <button
-                        onClick={() => openEdit(t)}
-                        className="p-1.5 rounded-lg text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
-                      >
-                        <Pencil size={15} />
-                      </button>
-                      <button
-                        onClick={() => setDeleteId(t.id)}
-                        className="p-1.5 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition-colors"
-                      >
-                        <Trash2 size={15} />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </div>
+                </div>
+                
+                <p className="text-forest-800/70 text-xs italic font-serif leading-relaxed">
+                  "{t.review}"
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between pt-4 border-t border-forest-800/5 mt-4">
+                <button onClick={() => toggleActive(t)} className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300">
+                  {t.is_active ? (
+                    <><ToggleRight size={18} className="text-forest-800" /><span className="text-forest-800">Visible</span></>
+                  ) : (
+                    <><ToggleLeft size={18} className="text-forest-800/30" /><span className="text-forest-800/30">Hidden</span></>
+                  )}
+                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => openEdit(t)}
+                    className="p-2 rounded-xl text-forest-800/50 hover:text-forest-800 hover:bg-[#FAF8F5] border border-transparent hover:border-forest-800/5 transition-all duration-300 shadow-none hover:shadow-sm"
+                  >
+                    <Pencil size={13} />
+                  </button>
+                  <button
+                    onClick={() => setDeleteId(t.id)}
+                    className="p-2 rounded-xl text-red-400 hover:text-red-600 hover:bg-red-50 border border-transparent hover:border-red-100 transition-all duration-300 shadow-none hover:shadow-sm"
+                  >
+                    <Trash2 size={13} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       )}
 

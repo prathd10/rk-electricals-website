@@ -1,8 +1,9 @@
-import { Quote, Images, Inbox, Clock, AlertCircle } from 'lucide-react'
+import { Quote, Images, Inbox, Clock, AlertCircle, Eye, Users, TrendingUp, Globe } from 'lucide-react'
 import StatsCard from '../../components/admin/StatsCard'
 import { useTestimonials } from '../../hooks/useTestimonials'
 import { useProjects }     from '../../hooks/useProjects'
 import { useLeads }        from '../../hooks/useLeads'
+import { useAnalytics }    from '../../hooks/useAnalytics'
 
 const STATUS_STYLE = {
   new:       'bg-blue-50 text-blue-700 border-blue-100',
@@ -15,6 +16,7 @@ export default function Dashboard() {
   const { data: testimonials = [], isLoading: tLoading } = useTestimonials({ adminAll: true })
   const { data: projects     = [], isLoading: pLoading } = useProjects({ adminAll: true })
   const { data: leads        = [], isLoading: lLoading } = useLeads()
+  const { data: analytics = { totalViews: 0, uniqueVisitors: 0, viewsByPath: [] }, isLoading: aLoading } = useAnalytics()
 
   const newLeads       = leads.filter((l) => l.status === 'new').length
   const recentLeads    = leads.slice(0, 5)
@@ -36,11 +38,13 @@ export default function Dashboard() {
       </div>
 
       {/* ================= STATS SECTION ================= */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6">
         <StatsCard icon={Inbox}  label="Total Leads"        value={leads.length}        color="blue"  loading={lLoading} />
         <StatsCard icon={AlertCircle} label="New Enquiries"  value={newLeads}            color="red"   loading={lLoading} />
         <StatsCard icon={Quote}  label="Testimonials"        value={testimonials.length} color="amber" loading={tLoading} />
         <StatsCard icon={Images} label="Projects in Gallery" value={projects.length}     color="green" loading={pLoading} />
+        <StatsCard icon={Eye}    label="Total Views"        value={analytics.totalViews} color="blue"  loading={aLoading} />
+        <StatsCard icon={Users}  label="Unique Visitors"     value={analytics.uniqueVisitors} color="green" loading={aLoading} />
       </div>
 
       {/* ================= RECENT ENQUIRIES & QUICK ACTIONS ================= */}
@@ -146,6 +150,66 @@ export default function Dashboard() {
           </div>
         </div>
 
+      </div>
+
+      {/* ================= TRAFFIC & ANALYTICS SECTION ================= */}
+      <div className="space-y-6 pt-4 border-t border-forest-800/5">
+        <h2 className="font-serif text-2xl text-forest-800 tracking-wide flex items-center gap-3">
+          <TrendingUp size={22} className="text-forest-600" />
+          Website Traffic Analytics
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left/Middle: Popular Pages */}
+          <div className="lg:col-span-2 space-y-6">
+            
+            {/* Popular Pages Card */}
+            <div className="admin-card">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-serif text-lg text-forest-800 flex items-center gap-2.5">
+                  <Globe size={18} className="text-forest-600" />
+                  Most Visited Pages
+                </h3>
+              </div>
+              
+              {aLoading ? (
+                <div className="text-forest-800/40 text-sm font-sans font-medium py-8 text-center animate-pulse">Loading views...</div>
+              ) : analytics.viewsByPath.length === 0 ? (
+                <div className="text-forest-800/40 text-sm font-sans font-medium py-8 text-center">No traffic logged yet.</div>
+              ) : (
+                <div className="space-y-4">
+                  {analytics.viewsByPath.slice(0, 5).map((vp) => {
+                    const percentage = analytics.totalViews > 0 ? Math.round((vp.count / analytics.totalViews) * 100) : 0
+                    return (
+                      <div key={vp.path} className="space-y-1.5">
+                        <div className="flex items-center justify-between text-xs font-sans font-bold text-forest-800/70">
+                          <span className="font-mono bg-[#FAF8F5] border border-forest-800/5 px-2 py-0.5 rounded-md text-[11px] text-forest-800">{vp.path}</span>
+                          <span>{vp.count} views ({percentage}%)</span>
+                        </div>
+                        {/* Custom progress bar */}
+                        <div className="w-full bg-[#FAF8F5] border border-forest-800/5 h-2 rounded-full overflow-hidden">
+                          <div className="bg-forest-600 h-full rounded-full transition-all duration-500" style={{ width: `${percentage}%` }} />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {/* Right side: Security context or analytics summary */}
+          <div className="admin-card bg-[#faf8f5] flex flex-col justify-between p-6">
+            <div className="space-y-3">
+              <h3 className="font-serif text-lg text-forest-800">Traffic Summary</h3>
+              <p className="text-forest-800/60 text-xs leading-relaxed font-medium">
+                Views and visitor counts are tracked using lightweight local session storage. This data helps monitor website engagement and response rates for marketing optimization.
+              </p>
+            </div>
+            <div className="pt-6 border-t border-forest-800/5 mt-6 text-[10px] font-sans font-bold text-forest-800/40 uppercase tracking-widest">
+              Realtime Tracking active
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

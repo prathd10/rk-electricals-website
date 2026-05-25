@@ -1,5 +1,6 @@
 import { Star, Quote, ExternalLink } from 'lucide-react'
 import { useReveal } from '../../hooks/useInView'
+import { useTestimonials } from '../../hooks/useTestimonials'
 
 const REVIEWS = [
   {
@@ -31,6 +32,19 @@ const REVIEWS = [
 
 export default function Testimonials() {
   const ref = useReveal()
+  const { data: dbTestimonials = [], isLoading } = useTestimonials()
+
+  // Map dynamic reviews from Supabase or fallback to static list
+  const activeReviews = dbTestimonials.length > 0
+    ? dbTestimonials.map((t) => ({
+        name: t.name,
+        role: t.location || 'Verified Client',
+        text: t.review,
+        rating: t.rating
+      }))
+    : REVIEWS
+
+  const displayList = [...activeReviews, ...activeReviews]
 
   return (
     <section id="testimonials" className="pt-24 pb-0 bg-cream-50 overflow-hidden" ref={ref}>
@@ -67,10 +81,9 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Marquee - Left to Right */}
       <div className="relative flex overflow-hidden mask-fade-side py-10">
         <div className="flex animate-marquee-reverse whitespace-nowrap gap-8">
-          {[...REVIEWS, ...REVIEWS].map((r, i) => (
+          {displayList.map((r, i) => (
             <div 
               key={`${r.name}-${i}`} 
               className="inline-block w-[320px] md:w-[400px] bg-white p-8 md:p-12 shadow-sm border border-pastelBrown-100 relative group shrink-0"

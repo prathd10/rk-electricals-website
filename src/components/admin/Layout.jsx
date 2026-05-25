@@ -36,7 +36,7 @@ export default function AdminLayout() {
           <span className="font-serif text-lg tracking-wide text-forest-800">Admin Panel</span>
         </div>
 
-        <main className="flex-1 overflow-y-auto p-6 sm:p-8 lg:p-10">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-8 lg:p-10">
           <Outlet />
         </main>
       </div>

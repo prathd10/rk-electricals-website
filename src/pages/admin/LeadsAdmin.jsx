@@ -210,7 +210,7 @@ export default function LeadsAdmin() {
 
                   {/* Status Change Selector Dropdown */}
                   <div className="relative group">
-                    <button className="flex items-center justify-between gap-2 px-4 py-3 bg-[#FAF8F5] border border-forest-800/10 text-forest-800 text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-white hover:border-forest-800/30 transition-all duration-300 w-full shadow-sm">
+                    <button className="flex items-center justify-center gap-2.5 px-4 py-3 bg-[#FAF8F5] border border-forest-800/10 text-forest-800 text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-white hover:border-forest-800/30 transition-all duration-300 w-full shadow-sm">
                       Status
                       <ChevronDown size={12} className="text-forest-600/70" />
                     </button>
