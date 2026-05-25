@@ -10,19 +10,16 @@ export default function StatsCard({ icon: Icon, label, value, color = 'amber', l
   const c = colors[color] || colors.amber
 
   return (
-    <div className={`admin-card border ${c.border} transition-all duration-300`}>
-      <div className="flex items-center justify-between">
-        <div className="space-y-1">
-          <p className="text-[10px] font-sans font-bold uppercase tracking-widest text-forest-800/40">{label}</p>
-          {loading ? (
-            <LoadingSpinner size="sm" className="mt-1" />
-          ) : (
-            <p className="text-4xl font-serif text-forest-800 tracking-tight">{value ?? '—'}</p>
-          )}
-        </div>
-        <div className={`w-12 h-12 ${c.bg} rounded-xl border border-forest-800/5 flex items-center justify-center shadow-inner`}>
-          <Icon size={20} className={c.icon} />
-        </div>
+    <div className={`admin-card !p-4 md:!p-5 border ${c.border} transition-all duration-300`}>
+      <div className="space-y-1">
+        <p className="text-[10px] font-sans font-bold uppercase tracking-widest text-forest-800/40">
+          {label}
+        </p>
+        {loading ? (
+          <LoadingSpinner size="sm" className="mt-1" />
+        ) : (
+          <p className="text-3xl font-serif text-forest-800 tracking-tight">{value ?? '—'}</p>
+        )}
       </div>
     </div>
   )
