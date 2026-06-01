@@ -39,9 +39,11 @@ export default function Header() {
           
           {/* Logo */}
           <a href="/" className="flex items-center gap-4 group">
-            <span className={`font-serif text-2xl tracking-tight transition-colors duration-500 ${isLightText ? 'text-white' : 'text-forest-800'}`}>
-              RK ELECTRICALS
-            </span>
+            <img 
+              src="/rkelectricals-logo-cropped.png" 
+              alt="RK Electricals" 
+              className={`h-6 md:h-8 w-auto object-contain translate-y-1 transition-all duration-500 ${isLightText ? 'brightness-0 invert opacity-90' : 'opacity-100'}`}
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -92,7 +94,11 @@ export default function Header() {
         >
           {/* Top: Close & Logo */}
           <div className="flex items-center justify-between mb-12">
-            <span className="font-serif text-xl tracking-tight text-white/90">RK ELECTRICALS</span>
+            <img 
+              src="/rkelectricals-logo-cropped.png" 
+              alt="RK Electricals" 
+              className="h-6 md:h-8 w-auto object-contain translate-y-1 brightness-0 invert opacity-90"
+            />
             <button 
               onClick={() => setIsOpen(false)} 
               className="text-white/60 hover:text-white bg-white/5 hover:bg-white/10 p-2.5 rounded-full transition-all duration-300"
