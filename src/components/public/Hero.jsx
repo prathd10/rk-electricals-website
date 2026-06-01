@@ -38,13 +38,9 @@ export default function Hero() {
 
           <div className="mt-8 reveal d-400">
             <a 
-              href="https://wa.me/919920249933?text=I%20need%20immediate%20electrical%20service" 
-              className="inline-flex items-center gap-2 bg-pastelBrown-500 text-white px-6 py-3 font-bold uppercase tracking-widest text-[8px] hover:bg-pastelBrown-600 transition-all shadow-xl rounded-sm"
+              href="https://wa.me/919920249933?text=I%20need%20immediate%20electrical%20service.%0A%0A*Name:*%20%0A*Phone:*%20" 
+              className="inline-flex items-center justify-center bg-forest-900/70 backdrop-blur-md border border-white/20 text-white px-8 py-4 md:px-10 md:py-5 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-forest-900/80 hover:scale-105 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.2)] rounded-full"
             >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white"></span>
-              </span>
               Request Immediate Service
             </a>
           </div>

@@ -1,7 +1,7 @@
-import { MessageCircle } from 'lucide-react'
+import WhatsAppIcon from '../ui/WhatsAppIcon'
 
 const WA    = '919920249933' // Jasmine Sheth (Official WhatsApp)
-const WA_MSG = encodeURIComponent("Hi! I found your website and need electrical work done. Can you help?")
+const WA_MSG = encodeURIComponent("Hi! I found your website and need electrical work done.\n\n*Name:* \n*Phone:* ")
 
 export default function WhatsAppButton() {
   return (
@@ -31,7 +31,7 @@ export default function WhatsAppButton() {
         <span className="relative w-full h-full rounded-full bg-[#25D366] flex items-center justify-center
                          shadow-xl shadow-[#25D366]/40 hover:scale-110 hover:shadow-2xl
                          transition-all duration-200 z-10">
-          <MessageCircle size={26} className="text-white fill-white" />
+          <WhatsAppIcon size={26} className="text-white fill-white" />
         </span>
       </a>
     </div>

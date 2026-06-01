@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle, CheckCircle2 } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
+import WhatsAppIcon from '../components/ui/WhatsAppIcon'
 import { useReveal } from '../hooks/useInView'
 import { useCreateLead } from '../hooks/useLeads'
 import toast from 'react-hot-toast'
@@ -68,10 +69,10 @@ export default function ContactPage() {
               {/* WhatsApp */}
               <div className="space-y-4">
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
-                  <MessageCircle size={12} /> WhatsApp
+                  <WhatsAppIcon size={12} /> WhatsApp
                 </h4>
                 <p className="font-serif text-xl text-forest-800">
-                  <a href="https://wa.me/919920249933" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
+                  <a href="https://wa.me/919920249933?text=Hi!%20I%20found%20your%20website%20and%20need%20electrical%20work%20done.%0A%0A*Name%3A*%20%0A*Phone%3A*%20" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
                 </p>
                 <p className="text-sm text-forest-800/60">Jasmine Sheth (Official Inquiries)</p>
               </div>

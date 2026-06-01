@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Phone, MessageCircle, Trash2, ChevronDown, Inbox, Mail, Calendar } from 'lucide-react'
+import { Phone, Trash2, ChevronDown, Inbox, Mail, Calendar } from 'lucide-react'
+import WhatsAppIcon from '../../components/ui/WhatsAppIcon'
 import { useLeads, useUpdateLeadStatus, useDeleteLead } from '../../hooks/useLeads'
 import ConfirmDialog  from '../../components/ui/ConfirmDialog'
 import LoadingSpinner from '../../components/ui/LoadingSpinner'
@@ -204,7 +205,7 @@ export default function LeadsAdmin() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2.5 px-4 py-3 bg-[#25D366]/5 border border-[#25D366]/10 hover:bg-[#25D366]/10 text-[#128C7E] text-[10px] font-bold uppercase tracking-[0.2em] rounded-xl transition-all duration-300 shadow-sm active:scale-[0.98]"
                   >
-                    <MessageCircle size={12} />
+                    <WhatsAppIcon size={12} />
                     WhatsApp
                   </a>
 

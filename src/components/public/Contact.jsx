@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Mail, MapPin, Phone, Send, MessageCircle, CheckCircle2 } from 'lucide-react'
+import { Mail, MapPin, Phone, Send, CheckCircle2 } from 'lucide-react'
+import WhatsAppIcon from '../ui/WhatsAppIcon'
 import { useReveal } from '../../hooks/useInView'
 import { useCreateLead } from '../../hooks/useLeads'
 import toast from 'react-hot-toast'
@@ -64,11 +65,11 @@ export default function Contact() {
 
             {/* WhatsApp */}
             <div className="flex gap-8 group">
-              <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><MessageCircle size={24} strokeWidth={1.5} /></div>
+              <div className="text-forest-800 opacity-30 group-hover:opacity-100 transition-opacity"><WhatsAppIcon size={24} /></div>
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-widest text-forest-600 mb-2">WhatsApp</div>
                 <div className="text-xl font-serif text-forest-800">
-                  <a href="https://wa.me/919920249933" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
+                  <a href="https://wa.me/919920249933?text=Hi!%20I%20found%20your%20website%20and%20need%20electrical%20work%20done.%0A%0A*Name%3A*%20%0A*Phone%3A*%20" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
                 </div>
                 <div className="text-sm font-sans text-forest-600 mt-1">Jasmine Sheth (Official Inquiries)</div>
               </div>

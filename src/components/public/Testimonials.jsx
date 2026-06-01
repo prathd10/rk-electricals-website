@@ -82,7 +82,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative flex overflow-hidden mask-fade-side py-10">
-        <div className="flex animate-marquee-reverse whitespace-nowrap gap-8">
+        <div className="flex animate-marquee whitespace-nowrap gap-8">
           {displayList.map((r, i) => (
             <div 
               key={`${r.name}-${i}`} 
@@ -110,12 +110,12 @@ export default function Testimonials() {
       </div>
 
       <style jsx>{`
-        .animate-marquee-reverse {
-          animation: marquee-reverse 40s linear infinite;
+        .animate-marquee {
+          animation: marquee 40s linear infinite;
         }
-        @keyframes marquee-reverse {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
         .mask-fade-side {
           mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
