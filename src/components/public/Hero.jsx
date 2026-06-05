@@ -16,11 +16,13 @@ export default function Hero() {
         
         {/* Left: Content */}
         <div className="w-[70%] text-left bg-white/40 backdrop-blur-xl px-6 md:px-12 py-16 md:py-20 rounded-r-[40px] border border-l-0 border-white/60 shadow-2xl flex flex-col justify-center">
-          <h1 className="font-serif text-2xl md:text-5xl text-forest-800 mb-8 reveal d-100 leading-[1.1] tracking-tight">
-            Powering excellence <br />
-            <span className="italic font-normal text-forest-800 drop-shadow-sm">and electrifying trust</span> <br />
-            for <span className="text-pastelBrown-800 font-bold">30+ years now.</span>
+          <h1 className="font-serif text-3xl md:text-6xl text-forest-800 mb-6 reveal d-100 leading-[1.1] tracking-tight">
+            Electrical Contracting
+            <span className="block italic font-normal text-forest-800 drop-shadow-sm">& Maintenance Solutions</span>
           </h1>
+          <p className="text-forest-800/80 text-sm md:text-base font-sans mb-8 reveal d-200 max-w-lg leading-relaxed">
+            Serving Mumbai with <strong className="text-pastelBrown-800 text-lg">30+ years of experience</strong>. Trusted by housing societies, architects, and commercial properties across the city.
+          </p>
 
           <div className="flex flex-wrap justify-start gap-4 reveal d-300">
             <a href="/contact" className="btn-underline text-[9px]">

@@ -13,7 +13,8 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    serviceType: 'New Wiring / Setup',
+    company: '',
+    serviceType: 'Society AMC Contract',
     message: ''
   })
 
@@ -29,7 +30,7 @@ export default function Contact() {
         name: formData.name,
         phone: formData.phone,
         service_type: formData.serviceType,
-        message: formData.message || 'N/A'
+        message: `Source: Homepage Contact Form\n` + (formData.company ? `Company/Society: ${formData.company}\n\n${formData.message || 'N/A'}` : (formData.message || 'N/A'))
       })
       toast.success('Request submitted successfully!')
       setSubmitted(true)
@@ -39,8 +40,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-cream-100" ref={ref}>
-      <div className="max-w-site pad grid lg:grid-cols-2 gap-24 items-start">
+    <section id="contact" className="py-16 md:py-32 bg-cream-100" ref={ref}>
+      <div className="max-w-site pad grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
         
         {/* Info */}
         <div>
@@ -102,7 +103,7 @@ export default function Contact() {
         </div>
 
         {/* Form */}
-        <div className="reveal d-200 bg-white p-12 lg:p-16 shadow-2xl">
+        <div className="reveal d-200 bg-white p-6 md:p-12 lg:p-16 shadow-2xl">
           {submitted ? (
             <div className="text-center py-20 animate-fade-in">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-forest-50 text-forest-600 mb-8 shadow-inner border border-forest-100/50 relative">
@@ -116,8 +117,8 @@ export default function Contact() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-10">
-              <div className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
                 <input 
                   type="text" 
@@ -125,10 +126,10 @@ export default function Contact() {
                   placeholder="Your Name" 
                   value={formData.name}
                   onChange={e => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" 
+                  className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base placeholder:text-forest-100" 
                 />
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Contact Number *</label>
                 <input 
                   type="tel" 
@@ -136,36 +137,46 @@ export default function Contact() {
                   placeholder="Mobile number" 
                   value={formData.phone}
                   onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100" 
+                  className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base placeholder:text-forest-100" 
                 />
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Society Name / Architect Firm</label>
+                <input 
+                  type="text" 
+                  placeholder="Optional but recommended for B2B" 
+                  value={formData.company}
+                  onChange={e => setFormData({ ...formData, company: e.target.value })}
+                  className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base placeholder:text-forest-100" 
+                />
+              </div>
+              <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Service Required</label>
                 <select 
                   value={formData.serviceType}
                   onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
-                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl cursor-pointer"
+                  className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base cursor-pointer"
                 >
-                  <option value="New Wiring / Setup">New Wiring / Setup</option>
                   <option value="Society AMC Contract">Society AMC Contract</option>
-                  <option value="Gadget / Appliance Repair">Gadget / Appliance Repair</option>
-                  <option value="Equipment Inquiry">Equipment Inquiry</option>
+                  <option value="Architect Project / Building Rewiring">Architect Project / Building Rewiring</option>
+                  <option value="Commercial / Office Setup">Commercial / Office Setup</option>
+                  <option value="Individual Residential / Retail Repair">Individual Residential / Retail Repair</option>
                 </select>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Message</label>
                 <textarea 
-                  rows="4" 
+                  rows="3" 
                   placeholder="Briefly describe your work" 
                   value={formData.message}
                   onChange={e => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-transparent border-b border-forest-800/10 py-4 focus:border-forest-800 transition-colors outline-none font-serif text-xl placeholder:text-forest-100 resize-none"
+                  className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base placeholder:text-forest-100 resize-none"
                 ></textarea>
               </div>
               <button 
                 type="submit" 
                 disabled={createLead.isPending}
-                className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-6 hover:bg-pastelBrown-500 transition-all duration-500 flex items-center justify-center gap-4 group disabled:opacity-55 disabled:cursor-not-allowed"
+                className="w-full bg-forest-800 text-white font-sans font-bold uppercase tracking-[0.2em] text-[12px] py-4 hover:bg-pastelBrown-500 transition-all duration-500 flex items-center justify-center gap-4 group disabled:opacity-55 disabled:cursor-not-allowed"
               >
                 {createLead.isPending ? 'Submitting...' : 'Submit Request'}
                 <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
@@ -174,6 +185,22 @@ export default function Contact() {
           )}
         </div>
 
+      </div>
+
+      {/* Google Map Full Width */}
+      <div className="max-w-site mx-auto px-4 sm:px-6 lg:px-8 mt-24 reveal d-300">
+        <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-forest-100/50 relative bg-gray-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.8436531!3d19.2307524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b12db71593ef%3A0x8e8334863c87f1ce!2sR.K.%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="RK Electricals Shop Location"
+          ></iframe>
+        </div>
       </div>
     </section>
   )

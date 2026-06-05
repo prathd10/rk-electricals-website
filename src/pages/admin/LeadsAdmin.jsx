@@ -41,7 +41,8 @@ export default function LeadsAdmin() {
       'Message',
       'Company/Society',
       'Property Type',
-      'Scope'
+      'Scope',
+      'Source'
     ];
 
     // Check if the message matches our custom structured format

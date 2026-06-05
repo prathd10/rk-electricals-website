@@ -13,6 +13,7 @@ import Amc            from './pages/Amc'
 import Designers      from './pages/Designers'
 import About          from './pages/About'
 import ContactPage    from './pages/ContactPage'
+import ServicesPage   from './pages/ServicesPage'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/amc" element={<Amc />} />
           <Route path="/designers" element={<Designers />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
         

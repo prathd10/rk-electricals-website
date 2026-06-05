@@ -31,7 +31,7 @@ export default function Amc() {
         phone: formData.phone,
         email: formData.email,
         service_type: 'Society AMC Contract',
-        message: `Company/Society: ${formData.companyName}\nProperty Type: ${formData.propertyType}\nScope: ${formData.message}`
+        message: `Source: AMC Page\nCompany/Society: ${formData.companyName}\nProperty Type: ${formData.propertyType}\nScope: ${formData.message}`
       })
       toast.success('AMC inquiry submitted successfully!')
       setSubmitted(true)

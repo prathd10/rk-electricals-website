@@ -29,7 +29,7 @@ export default function ContactPage() {
         name: formData.name,
         phone: formData.phone,
         service_type: formData.serviceType,
-        message: formData.message || 'N/A'
+        message: `Source: Contact Page\nMessage: ${formData.message || 'N/A'}`
       })
       toast.success('Inquiry submitted successfully!')
       setSubmitted(true)
@@ -40,8 +40,8 @@ export default function ContactPage() {
 
   return (
     <div className="pt-20 bg-tan-50 min-h-screen" ref={ref}>
-      <section className="pt-8 pb-20 pad">
-        <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-24 items-center">
+      <section className="pt-6 pb-16 pad">
+        <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           
           {/* Info Side */}
           <div className="reveal d-0">
@@ -50,7 +50,7 @@ export default function ContactPage() {
               Let's power your <br />
               <span className="italic font-normal text-forest-600">next project.</span>
             </h1>
-            <p className="text-lg text-forest-800/60 mt-12 mb-16 leading-relaxed max-w-md">
+            <p className="text-base text-forest-800/60 mt-6 mb-10 leading-relaxed max-w-md">
               Whether you need an emergency repair or a large-scale infrastructure consultation, our team is ready to help.
             </p>
 
@@ -111,7 +111,7 @@ export default function ContactPage() {
           </div>
 
           {/* Form Side */}
-          <div className="reveal d-200 bg-white p-12 lg:p-16 shadow-2xl rounded-3xl border border-forest-800/5">
+          <div className="reveal d-200 bg-white p-6 md:p-12 lg:p-16 shadow-2xl rounded-3xl border border-forest-800/5">
             {submitted ? (
               <div className="text-center py-16 animate-fade-in">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-forest-50 text-forest-600 mb-8 shadow-inner border border-forest-100/50 relative">
@@ -128,7 +128,7 @@ export default function ContactPage() {
               <>
                 <h2 className="font-serif text-3xl text-forest-800 mb-10">Send a Message.</h2>
                 <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
                       <input 
@@ -137,7 +137,7 @@ export default function ContactPage() {
                         placeholder="John Doe" 
                         value={formData.name}
                         onChange={e => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" 
+                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-base" 
                       />
                     </div>
                     <div className="space-y-2">
@@ -148,7 +148,7 @@ export default function ContactPage() {
                         placeholder="+91 98765 43210" 
                         value={formData.phone}
                         onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" 
+                        className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-base" 
                       />
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                     <select 
                       value={formData.serviceType}
                       onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
-                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg cursor-pointer"
+                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-base cursor-pointer"
                     >
                       <option value="General Repair">General Repair</option>
                       <option value="New Installation">New Installation</option>
@@ -173,13 +173,13 @@ export default function ContactPage() {
                       placeholder="How can we help?" 
                       value={formData.message}
                       onChange={e => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg resize-none"
+                      className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-base resize-none"
                     ></textarea>
                   </div>
                   <button 
                     type="submit"
                     disabled={createLead.isPending}
-                    className="w-full bg-forest-800 text-white py-6 font-bold uppercase tracking-widest text-[12px] hover:bg-pastelBrown-500 transition-all flex items-center justify-center gap-4 disabled:opacity-55 disabled:cursor-not-allowed shadow-lg rounded-sm"
+                    className="w-full bg-forest-800 text-white py-4 font-bold uppercase tracking-widest text-[12px] hover:bg-pastelBrown-500 transition-all flex items-center justify-center gap-4 disabled:opacity-55 disabled:cursor-not-allowed shadow-lg rounded-sm"
                   >
                     {createLead.isPending ? 'Sending...' : 'Send Request'} <Send size={16} />
                   </button>

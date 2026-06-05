@@ -30,7 +30,7 @@ export default function Designers() {
         phone: formData.phone,
         email: formData.email || null,
         service_type: 'Designer Collaboration Request',
-        message: `Project Studio: ${formData.name}\nProject Scope: ${formData.project || 'N/A'}\nMessage: ${formData.message || 'N/A'}`
+        message: `Source: Architects & Designers Page\nProject Studio: ${formData.name}\nProject Scope: ${formData.project || 'N/A'}\nMessage: ${formData.message || 'N/A'}`
       })
       toast.success('Collaboration request submitted!')
       setSubmitted(true)

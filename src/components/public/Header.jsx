@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
-  { name: 'Services', href: '/#services' },
+  { name: 'Services', href: '/services' },
   { name: 'Portfolio', href: '/#gallery' },
-  { name: 'Designers', href: '/designers' },
-  { name: 'AMC Services', href: '/amc' },
+  { name: 'Society AMC', href: '/amc' },
+  { name: 'Architects', href: '/designers' },
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
 ]
@@ -23,17 +23,19 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isLightText = isScrolled || isHomePage
+  // White text on: homepage scrolled, all non-homepage pages (always solid tan bg)
+  // Dark text on: homepage unscrolled (glass over hero)
+  const isLightText = !isHomePage || isScrolled
 
   return (
     <>
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 pad 
-                    ${isScrolled 
-                      ? 'bg-[#B2A08F] shadow-2xl py-4' 
-                      : isHomePage 
-                        ? 'bg-black/20 backdrop-blur-md border-b border-white/10' 
-                        : 'bg-transparent'}`}
+                    ${isHomePage
+                      ? isScrolled
+                        ? 'bg-[#B2A08F] shadow-2xl py-4'
+                        : 'bg-black/20 backdrop-blur-md border-b border-white/10'
+                      : 'bg-[#B2A08F] shadow-md py-4'}`}
       >
         <div className="max-w-site mx-auto flex items-center justify-between">
           

@@ -1,27 +1,28 @@
-import { Home, ShieldCheck, ShoppingBag, Wrench, ArrowRight, ClipboardCheck } from 'lucide-react'
+import { Home, ShieldCheck, ShoppingBag, Wrench, ArrowRight, ClipboardCheck, Building } from 'lucide-react'
 import { useReveal } from '../../hooks/useInView'
 
 const SERVICES = [
   {
-    icon: Home, title: 'Residential', 
-    desc: 'End-to-end luxury flat and bungalow wiring with PWD licensed precision.',
+    icon: ClipboardCheck, title: 'Society AMC',
+    desc: 'Comprehensive electrical maintenance, pump rooms, and common area lighting for housing societies.',
+    bg: 'bg-forest-50', accent: 'text-pastelBrown-500',
+    link: '/amc'
+  },
+  {
+    icon: Building, title: 'Contracting',
+    desc: 'Large-scale building rewiring, meter room upgrades, and commercial setups with PWD licensed precision.',
     bg: 'bg-white', accent: 'text-forest-600'
   },
   {
-    icon: Wrench, title: 'Gadget Repair',
-    desc: 'Expert repair for fans, mixers, geysers, and irons since 1994.',
-    bg: 'bg-forest-50', accent: 'text-pastelBrown-500'
+    icon: Home, title: 'Architect Projects',
+    desc: 'BOQ support, site coordination, and premium lighting execution for interior designers and architects.',
+    bg: 'bg-forest-50', accent: 'text-forest-800',
+    link: '/designers'
   },
   {
-    icon: ShoppingBag, title: 'Retail Shop',
-    desc: 'Premium switches and lighting from global brands in Borivali.',
-    bg: 'bg-white', accent: 'text-forest-800'
-  },
-  {
-    icon: ClipboardCheck, title: 'AMC Contracts',
-    desc: 'Comprehensive electrical maintenance for residential societies and offices.',
-    bg: 'bg-forest-50', accent: 'text-pastelBrown-500',
-    link: '/amc'
+    icon: ShoppingBag, title: 'Retail & Repair',
+    desc: 'Everyday electrical goods, premium switches, and expert gadget repairs at our Borivali shop.',
+    bg: 'bg-white', accent: 'text-pastelBrown-500'
   }
 ]
 
