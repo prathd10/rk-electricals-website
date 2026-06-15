@@ -40,9 +40,7 @@ export default function CaseStudies() {
   const extendedStudies = [...studies, studies[0]]
 
   useEffect(() => {
-    // Pause auto-rotation when hovered
     if (isHovered) return
-
     const timer = setInterval(() => {
       setIsTransitioning(true)
       setActiveIndex((current) => current + 1)
@@ -50,13 +48,17 @@ export default function CaseStudies() {
     return () => clearInterval(timer)
   }, [isHovered])
 
-  const handleTransitionEnd = () => {
-    // If we just slid to the cloned first slide (at the end), instantly snap back to the real first slide
-    if (activeIndex === studies.length) {
+  // Reset to real first slide after the clone slide transition completes.
+  // Uses setTimeout instead of onTransitionEnd — transitionend is unreliable
+  // when the element is off-screen, causing activeIndex to grow unboundedly.
+  useEffect(() => {
+    if (activeIndex < studies.length) return
+    const id = setTimeout(() => {
       setIsTransitioning(false)
       setActiveIndex(0)
-    }
-  }
+    }, 720) // slightly longer than the 700ms transition
+    return () => clearTimeout(id)
+  }, [activeIndex])
 
   const handleDotClick = (i) => {
     setIsTransitioning(true)
@@ -139,10 +141,9 @@ export default function CaseStudies() {
             onMouseMove={handleTouchMove}
             onMouseUp={handleTouchEnd}
           >
-            <div 
-              className={`flex ease-in-out ${isTransitioning ? 'transition-transform duration-700' : ''}`} 
+            <div
+              className={`flex ease-in-out ${isTransitioning ? 'transition-transform duration-700' : ''}`}
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-              onTransitionEnd={handleTransitionEnd}
             >
               {extendedStudies.map((study, i) => (
                 <div key={i} className="w-full shrink-0 select-none">

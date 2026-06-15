@@ -1,6 +1,6 @@
 import WhatsAppIcon from '../ui/WhatsAppIcon'
 
-const WA    = '919920249933' // Jasmine Sheth (Official WhatsApp)
+const WA    = '919653634961'
 const WA_MSG = encodeURIComponent("Hi! I found your website and need electrical work done.\n\n*Name:* \n*Phone:* ")
 
 export default function WhatsAppButton() {

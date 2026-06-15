@@ -72,9 +72,8 @@ export default function ContactPage() {
                   <WhatsAppIcon size={12} /> WhatsApp
                 </h4>
                 <p className="font-serif text-xl text-forest-800">
-                  <a href="https://wa.me/919920249933?text=Hi!%20I%20found%20your%20website%20and%20need%20electrical%20work%20done.%0A%0A*Name%3A*%20%0A*Phone%3A*%20" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 99202 49933</a>
+                  <a href="https://wa.me/919653634961?text=Hi!%20I%20found%20your%20website%20and%20need%20electrical%20work%20done.%0A%0A*Name%3A*%20%0A*Phone%3A*%20" target="_blank" rel="noopener noreferrer" className="hover:text-forest-600 transition-colors">+91 96536 34961</a>
                 </p>
-                <p className="text-sm text-forest-800/60">Jasmine Sheth (Official Inquiries)</p>
               </div>
 
               {/* Email */}
@@ -92,7 +91,7 @@ export default function ContactPage() {
                 <h4 className="text-[10px] font-bold uppercase tracking-widest text-forest-800/40 flex items-center gap-2">
                   <Clock size={12} /> Shop Hours
                 </h4>
-                <p className="font-serif text-xl text-forest-800">10 AM — 7 PM</p>
+                <p className="font-serif text-xl text-forest-800">9:30 AM — 7:30 PM</p>
                 <p className="text-sm text-forest-800/60">Monday to Saturday</p>
               </div>
 

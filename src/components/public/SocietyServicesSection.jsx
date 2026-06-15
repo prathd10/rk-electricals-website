@@ -6,7 +6,6 @@ export default function SocietyServicesSection() {
 
   const features = [
     "Common Area & Staircase Lighting",
-    "Pump Room Maintenance",
     "Panel & MCB Replacement",
     "Earthing Inspection & Upgrades",
     "Energy-Saving Projects (LED retrofits)",
