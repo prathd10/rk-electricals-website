@@ -30,7 +30,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Route>
         
-        <Route path="/login" element={<Login />} />
+        <Route path="/admin/login" element={<Login />} />
 
         {/* Admin (protected) */}
         <Route
