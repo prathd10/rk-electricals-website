@@ -14,12 +14,14 @@ export default function Amc() {
     phone: '',
     email: '',
     propertyType: 'Society',
-    message: ''
+    message: '',
+    _trap: '',
   })
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData._trap) { setSubmitted(true); return }
     if (!formData.contactName || !formData.phone) {
       toast.error('Please enter contact name and phone number')
       return
@@ -113,6 +115,7 @@ export default function Amc() {
                 <p className="text-forest-800/50 text-xs mb-8">Get a customized electrical maintenance layout for your property.</p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="text" name="website" value={formData._trap} onChange={e => setFormData({ ...formData, _trap: e.target.value })} tabIndex="-1" autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }} />
                   <div className="space-y-1">
                     <label className="text-[9px] font-bold uppercase tracking-wider text-forest-600">Society / Company Name</label>
                     <input 

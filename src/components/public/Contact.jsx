@@ -14,12 +14,14 @@ export default function Contact() {
     name: '',
     phone: '',
     company: '',
-    serviceType: 'Society AMC Contract',
-    message: ''
+    serviceType: 'Tube Light Not Working',
+    message: '',
+    _trap: '',
   })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData._trap) { setSubmitted(true); return } // bot caught
     if (!formData.name || !formData.phone) {
       toast.error('Please enter your name and contact number')
       return
@@ -117,6 +119,17 @@ export default function Contact() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot — invisible to humans, bots fill it */}
+              <input
+                type="text"
+                name="website"
+                value={formData._trap}
+                onChange={e => setFormData({ ...formData, _trap: e.target.value })}
+                tabIndex="-1"
+                autoComplete="off"
+                aria-hidden="true"
+                style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+              />
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
                 <input 
@@ -156,10 +169,26 @@ export default function Contact() {
                   onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
                   className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 transition-colors outline-none font-serif text-base cursor-pointer"
                 >
-                  <option value="Society AMC Contract">Society AMC Contract</option>
-                  <option value="Architect Project / Building Rewiring">Architect Project / Building Rewiring</option>
-                  <option value="Commercial / Office Setup">Commercial / Office Setup</option>
-                  <option value="Individual Residential / Retail Repair">Individual Residential / Retail Repair</option>
+                  <option value="Tube Light Not Working">Tube Light Not Working</option>
+                  <option value="Fan Not Working">Fan Not Working</option>
+                  <option value="Fan Speed Slow">Fan Speed Slow</option>
+                  <option value="Install New Tube Light">Install New Tube Light</option>
+                  <option value="Switch Not Working">Switch Not Working</option>
+                  <option value="Socket Problem">Socket Problem</option>
+                  <option value="No Light / One Phase Problem">No Light / One Phase Problem</option>
+                  <option value="Trip Problem">Trip Problem</option>
+                  <option value="Geyser Not Working">Geyser Not Working</option>
+                  <option value="AC Not Working">AC Not Working</option>
+                  <option value="Panel Light Not Working">Panel Light Not Working</option>
+                  <option value="LED Strip Light">LED Strip Light</option>
+                  <option value="Door Bell">Door Bell</option>
+                  <option value="MCB / Fuse">MCB / Fuse</option>
+                  <option value="New Point Wiring">New Point Wiring</option>
+                  <option value="CCTV Installation">CCTV Installation</option>
+                  <option value="TV Installation">TV Installation</option>
+                  <option value="Sound Bar Installation">Sound Bar Installation</option>
+                  <option value="Meter Related Work">Meter Related Work</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div className="space-y-2">

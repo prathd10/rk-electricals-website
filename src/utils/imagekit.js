@@ -59,14 +59,18 @@ export async function uploadToImageKit(file, folder = 'rk-electricals') {
     }
   }
 
-  // 2. If Edge Function failed or is not deployed, try local signature generation
+  // 2. Fallback: local signature — development only, never in production
   if (!signature) {
+    if (import.meta.env.PROD) {
+      throw new Error(
+        "Upload failed: deploy the Supabase Edge Function 'imagekit-auth' to enable production uploads. The private key must not be bundled into the client."
+      )
+    }
     if (!imagekitConfig.privateKey) {
       throw new Error(
-        "Upload failed: The Supabase Edge Function 'imagekit-auth' is not deployed, AND 'VITE_IMAGEKIT_PRIVATE_KEY' is missing in your local .env file. Please add your ImageKit Private Key to your .env file as VITE_IMAGEKIT_PRIVATE_KEY to enable local uploads!"
-      );
+        "Upload failed: Edge Function 'imagekit-auth' is not deployed and VITE_IMAGEKIT_PRIVATE_KEY is missing from .env (local dev only)."
+      )
     }
-    
     try {
       signature = await generateLocalSignature(token, expire, imagekitConfig.privateKey)
     } catch (err) {

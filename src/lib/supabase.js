@@ -15,5 +15,12 @@ export const isSupabaseConfigured = !!(
 
 // Safe client — won't throw even with empty strings or placeholder defaults
 export const supabase = isSupabaseConfigured
-  ? createClient(supabaseUrl, supabaseAnonKey)
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        flowType: 'pkce',          // Prevents auth code interception attacks
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: true,
+      }
+    })
   : createClient('https://placeholder.supabase.co', 'placeholder-key-for-demo-mode')

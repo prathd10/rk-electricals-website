@@ -13,12 +13,14 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    serviceType: 'General Repair',
-    message: ''
+    serviceType: 'Tube Light Not Working',
+    message: '',
+    _trap: '',
   })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData._trap) { setSubmitted(true); return } // bot caught
     if (!formData.name || !formData.phone) {
       toast.error('Please enter your name and phone number')
       return
@@ -127,6 +129,17 @@ export default function ContactPage() {
               <>
                 <h2 className="font-serif text-3xl text-forest-800 mb-10">Send a Message.</h2>
                 <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Honeypot — invisible to humans, bots fill it */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData._trap}
+                    onChange={e => setFormData({ ...formData, _trap: e.target.value })}
+                    tabIndex="-1"
+                    autoComplete="off"
+                    aria-hidden="true"
+                    style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+                  />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold uppercase tracking-widest text-forest-600 font-sans">Full Name *</label>
@@ -158,10 +171,25 @@ export default function ContactPage() {
                       onChange={e => setFormData({ ...formData, serviceType: e.target.value })}
                       className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-base cursor-pointer"
                     >
-                      <option value="General Repair">General Repair</option>
-                      <option value="New Installation">New Installation</option>
-                      <option value="AMC / Maintenance">AMC / Maintenance</option>
-                      <option value="Shop Inquiry">Shop Inquiry</option>
+                      <option value="Tube Light Not Working">Tube Light Not Working</option>
+                      <option value="Fan Not Working">Fan Not Working</option>
+                      <option value="Fan Speed Slow">Fan Speed Slow</option>
+                      <option value="Install New Tube Light">Install New Tube Light</option>
+                      <option value="Switch Not Working">Switch Not Working</option>
+                      <option value="Socket Problem">Socket Problem</option>
+                      <option value="No Light / One Phase Problem">No Light / One Phase Problem</option>
+                      <option value="Trip Problem">Trip Problem</option>
+                      <option value="Geyser Not Working">Geyser Not Working</option>
+                      <option value="AC Not Working">AC Not Working</option>
+                      <option value="Panel Light Not Working">Panel Light Not Working</option>
+                      <option value="LED Strip Light">LED Strip Light</option>
+                      <option value="Door Bell">Door Bell</option>
+                      <option value="MCB / Fuse">MCB / Fuse</option>
+                      <option value="New Point Wiring">New Point Wiring</option>
+                      <option value="CCTV Installation">CCTV Installation</option>
+                      <option value="TV Installation">TV Installation</option>
+                      <option value="Sound Bar Installation">Sound Bar Installation</option>
+                      <option value="Meter Related Work">Meter Related Work</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>

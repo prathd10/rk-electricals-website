@@ -9,6 +9,7 @@ import LeadsAdmin     from './pages/admin/LeadsAdmin'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import PublicLayout   from './components/public/PublicLayout'
+import NotFound       from './pages/NotFound'
 import Amc            from './pages/Amc'
 import Designers      from './pages/Designers'
 import About          from './pages/About'
@@ -47,7 +48,7 @@ export default function App() {
         </Route>
 
         {/* Catch-all */}
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )

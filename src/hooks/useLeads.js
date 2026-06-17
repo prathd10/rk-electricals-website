@@ -3,6 +3,17 @@ import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import toast from 'react-hot-toast'
 
 const TABLE = 'leads'
+const RATE_KEY = 'rk_last_lead'
+const RATE_MS  = 60_000 // 1 minute between submissions
+
+function checkRateLimit() {
+  const last = localStorage.getItem(RATE_KEY)
+  if (last && Date.now() - parseInt(last) < RATE_MS) {
+    const secs = Math.ceil((RATE_MS - (Date.now() - parseInt(last))) / 1000)
+    throw new Error(`Please wait ${secs} seconds before submitting again.`)
+  }
+  localStorage.setItem(RATE_KEY, String(Date.now()))
+}
 
 export function useLeads() {
   return useQuery({
@@ -23,10 +34,8 @@ export function useCreateLead() {
   const qc = useQueryClient()
   return useMutation({
     mutationFn: async (payload) => {
-      if (!isSupabaseConfigured) {
-        // Demo mode: simulate success without saving
-        return
-      }
+      checkRateLimit()
+      if (!isSupabaseConfigured) return
       const { error } = await supabase.from(TABLE).insert([payload])
       if (error) throw error
     },

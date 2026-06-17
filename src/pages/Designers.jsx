@@ -14,11 +14,13 @@ export default function Designers() {
     phone: '',
     email: '',
     project: '',
-    message: ''
+    message: '',
+    _trap: '',
   })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (formData._trap) { setSubmitted(true); return }
     if (!formData.name || !formData.phone) {
       toast.error('Please enter your name/studio and phone number')
       return
@@ -89,11 +91,12 @@ export default function Designers() {
               <>
                 <h2 className="font-serif text-3xl text-forest-800 mb-8">Let's Collaborate.</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="text" name="website" value={formData._trap} onChange={e => setFormData({ ...formData, _trap: e.target.value })} tabIndex="-1" autoComplete="off" aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }} />
                   <div className="grid md:grid-cols-2 gap-6">
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       required
-                      placeholder="Your Name / Studio *" 
+                      placeholder="Your Name / Studio *"
                       value={formData.name}
                       onChange={e => setFormData({ ...formData, name: e.target.value })}
                       className="w-full bg-transparent border-b border-forest-800/10 py-3 focus:border-forest-800 outline-none font-serif text-lg" 
