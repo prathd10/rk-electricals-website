@@ -58,7 +58,7 @@ export default function Dashboard() {
               Recent Enquiries
             </h2>
             <a 
-              href="/admin/leads" 
+              href="/admin/dashboard/leads"
               className="text-pastelBrown-500 text-xs font-bold uppercase tracking-widest hover:text-pastelBrown-600 transition-colors"
             >
               View all →
@@ -122,9 +122,9 @@ export default function Dashboard() {
 
             <div className="space-y-4 relative z-10">
               {[
-                { href: '/admin/testimonials', label: 'Add Testimonial',  icon: Quote,  desc: 'Create customer reviews' },
-                { href: '/admin/projects',     label: 'Add Project',      icon: Images, desc: 'Upload gallery items'   },
-                { href: '/admin/leads',        label: 'Manage Leads',     icon: Inbox,  desc: `${newLeads} pending responses` },
+                { href: '/admin/dashboard/testimonials', label: 'Add Testimonial',  icon: Quote,  desc: 'Create customer reviews' },
+                { href: '/admin/dashboard/projects',     label: 'Add Project',      icon: Images, desc: 'Upload gallery items'   },
+                { href: '/admin/dashboard/leads',        label: 'Manage Leads',     icon: Inbox,  desc: `${newLeads} pending responses` },
               ].map(({ href, label, icon: Icon, desc }) => (
                 <a
                   key={href}

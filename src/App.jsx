@@ -34,17 +34,17 @@ export default function App() {
 
         {/* Admin (protected) */}
         <Route
-          path="/admin"
+          path="/admin/dashboard"
           element={
             <ProtectedRoute>
               <AdminLayout />
             </ProtectedRoute>
           }
         >
-          <Route index           element={<Dashboard />} />
-          <Route path="testimonials" element={<TestimonialsAdmin />} />
-          <Route path="projects"     element={<ProjectsAdmin />} />
-          <Route path="leads"        element={<LeadsAdmin />} />
+          <Route index                   element={<Dashboard />} />
+          <Route path="testimonials"     element={<TestimonialsAdmin />} />
+          <Route path="projects"         element={<ProjectsAdmin />} />
+          <Route path="leads"            element={<LeadsAdmin />} />
         </Route>
 
         {/* Catch-all */}

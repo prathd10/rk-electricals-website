@@ -7,10 +7,10 @@ import { supabase } from '../../lib/supabase'
 import toast from 'react-hot-toast'
 
 const LINKS = [
-  { to: '/admin',              label: 'Dashboard',    icon: LayoutDashboard, end: true  },
-  { to: '/admin/testimonials', label: 'Testimonials', icon: Quote,           end: false },
-  { to: '/admin/projects',     label: 'Projects',     icon: Images,          end: false },
-  { to: '/admin/leads',        label: 'Leads',        icon: Inbox,           end: false },
+  { to: '/admin/dashboard',              label: 'Dashboard',    icon: LayoutDashboard, end: true  },
+  { to: '/admin/dashboard/testimonials', label: 'Testimonials', icon: Quote,           end: false },
+  { to: '/admin/dashboard/projects',     label: 'Projects',     icon: Images,          end: false },
+  { to: '/admin/dashboard/leads',        label: 'Leads',        icon: Inbox,           end: false },
 ]
 
 export default function Sidebar({ onClose }) {

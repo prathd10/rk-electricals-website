@@ -12,7 +12,7 @@ export default function Login() {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm()
 
   if (loading) return null
-  if (session)  return <Navigate to="/admin" replace />
+  if (session)  return <Navigate to="/admin/dashboard" replace />
 
   const onSubmit = async ({ email, password }) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
