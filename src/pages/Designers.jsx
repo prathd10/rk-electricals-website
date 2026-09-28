@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Palette, Lightbulb, Smartphone, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { useReveal } from '../hooks/useInView'
 import { useCreateLead } from '../hooks/useLeads'
+import SEOHead from '../components/common/SEOHead'
 import toast from 'react-hot-toast'
 
 export default function Designers() {
@@ -43,6 +44,12 @@ export default function Designers() {
 
   return (
     <div className="pt-20 bg-cream-50 min-h-screen overflow-hidden" ref={ref}>
+      <SEOHead 
+        title="Electrical Contracting for Architects & Designers | RK Electricals"
+        description="Electrical execution partner for Mumbai architects & interior designers. Luxury architectural lighting, magnetic track lights, 3-phase balancing & smart home conduits."
+        keywords="architect electrical contractor Mumbai, interior designer electrician Borivali, luxury lighting wiring, smart automation conduit planning"
+        canonicalUrl="https://rkelectricals.online/designers"
+      />
       <section className="pt-8 pb-12 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-16 items-center">
           

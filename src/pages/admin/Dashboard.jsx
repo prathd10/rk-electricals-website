@@ -145,7 +145,7 @@ export default function Dashboard() {
           
           {/* Internal Security Badge */}
           <div className="admin-card text-center p-6 bg-[#faf8f5]">
-            <p className="text-[9px] font-sans font-bold uppercase tracking-[0.25em] text-forest-800/40">R.K. Electricals</p>
+            <p className="text-[9px] font-sans font-bold uppercase tracking-[0.25em] text-forest-800/40">RK Electricals</p>
             <p className="text-[8px] font-sans font-bold uppercase tracking-[0.15em] text-forest-800/30 mt-1">Authorized Admin Node</p>
           </div>
         </div>

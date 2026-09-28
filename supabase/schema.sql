@@ -1,5 +1,5 @@
 -- ================================================================
--- R.K. Electricals — Supabase Database Schema
+-- RK Electricals — Supabase Database Schema
 -- Run this in: Supabase Dashboard → SQL Editor → New Query
 -- ================================================================
 
@@ -82,10 +82,10 @@ create policy "Admin full access leads"
 -- ================================================================
 
 insert into testimonials (name, review, rating, location) values
-  ('Suresh Mehta',      'R.K. Electricals did our entire flat wiring. The work is super clean — not a single wire visible. Very professional team, showed up on time and finished ahead of schedule.', 5, 'Borivali West, Mumbai'),
+  ('Suresh Mehta',      'RK Electricals did our entire flat wiring. The work is super clean — not a single wire visible. Very professional team, showed up on time and finished ahead of schedule.', 5, 'Borivali West, Mumbai'),
   ('Priya Nair',        'I called them for a faulty switchboard. They identified the problem in 10 minutes and fixed it safely. Honest about pricing — no hidden charges. Highly recommend!',              5, 'Kandivali, Mumbai'),
   ('Arun Deshmukh',     'Used their AMC service for our office. Monthly inspections keep everything running smoothly. No sudden electrical issues since we started. Worth every rupee.',                    5, 'Malad West, Mumbai'),
-  ('Kavita Shah',       'Our interior designer recommended R.K. Electricals for our new home. The cove lighting and chandelier installation is absolutely perfect. Very skilled workers.',                  5, 'Dahisar, Mumbai'),
+  ('Kavita Shah',       'Our interior designer recommended RK Electricals for our new home. The cove lighting and chandelier installation is absolutely perfect. Very skilled workers.',                  5, 'Dahisar, Mumbai'),
   ('Rakesh Tiwari',     'Builder-level work done for our apartment complex. 30+ flats, all wired on time and passed inspection first attempt. Excellent coordination by Kirit Bhai.',                     5, 'Borivali East, Mumbai');
 
 insert into projects (title, description, category, is_active) values

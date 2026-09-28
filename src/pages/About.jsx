@@ -1,11 +1,18 @@
 import { ShieldCheck, Award, History, Users, MapPin } from 'lucide-react'
 import { useReveal } from '../hooks/useInView'
+import SEOHead from '../components/common/SEOHead'
 
 export default function About() {
   const ref = useReveal()
 
   return (
     <div className="pt-24 bg-tan-50 min-h-screen" ref={ref}>
+      <SEOHead 
+        title="About RK Electricals | 30+ Years Legacy in Mumbai"
+        description="Learn about RK Electricals — established in 1994 in Borivali West. PWD-licensed electrical contractors with 5,000+ completed projects across Mumbai."
+        keywords="about RK Electricals, electrical contractor history Mumbai, PWD licensed electrician Borivali, Kirit Sheth electrician"
+        canonicalUrl="https://rkelectricals.online/about"
+      />
       {/* Hero Section */}
       <section className="pt-12 pb-20 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-20 items-center">

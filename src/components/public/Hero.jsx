@@ -29,7 +29,7 @@ export default function Hero() {
               Book a Service
             </a>
             <a 
-              href="https://www.google.com/maps/search/Surya+Kiran+Baburao+Paranjape+Marg+Borivali+West+Mumbai+400092" 
+              href="https://www.google.com/maps/search/?api=1&query=RK+Electricals+Shop+No.+3+Surya+Kiran+Society+Borivali+West+Mumbai+400091" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-underline text-pastelBrown-800 after:bg-pastelBrown-800 text-[9px]"

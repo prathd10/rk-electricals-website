@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 const TESTIMONIALS = [
   {
     name: 'Ramesh Patel',
-    review: 'R.K. Electricals renovated our old commercial showroom. Exceptional safety standards, modular boards are beautifully aligned, and all wiring passes building security checks.',
+    review: 'RK Electricals renovated our old commercial showroom. Exceptional safety standards, modular boards are beautifully aligned, and all wiring passes building security checks.',
     rating: 5,
     location: 'Ghatkopar, Mumbai',
     is_active: true

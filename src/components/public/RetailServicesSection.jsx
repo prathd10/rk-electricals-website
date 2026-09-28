@@ -55,6 +55,17 @@ export default function RetailServicesSection() {
           </div>
         </div>
 
+        <div className="mt-14 reveal d-400">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=RK+Electricals+Shop+No.+3+Surya+Kiran+Society+Borivali+West+Mumbai+400091" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-underline text-[10px]"
+          >
+            Visit Our Shop
+          </a>
+        </div>
+
       </div>
     </section>
   )

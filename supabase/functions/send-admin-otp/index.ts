@@ -68,7 +68,7 @@ Deno.serve(async (req) => {
         subject: `${otp} — Your Admin Login Code`,
         html: `
           <div style="font-family: Georgia, serif; max-width: 420px; margin: 0 auto; padding: 40px 32px; background: #faf8f5; border: 1px solid #e8e2d9;">
-            <p style="font-size: 11px; font-weight: bold; letter-spacing: 0.3em; text-transform: uppercase; color: #7a6a55; margin: 0 0 24px;">R.K. Electricals · Admin Portal</p>
+            <p style="font-size: 11px; font-weight: bold; letter-spacing: 0.3em; text-transform: uppercase; color: #7a6a55; margin: 0 0 24px;">RK Electricals · Admin Portal</p>
             <h1 style="font-size: 22px; font-weight: normal; color: #1a3329; margin: 0 0 16px;">Your login code</h1>
             <div style="font-size: 48px; font-weight: bold; letter-spacing: 12px; color: #1a3329; margin: 32px 0; padding: 24px; background: white; border: 1px solid #e8e2d9; text-align: center;">${otp}</div>
             <p style="color: #888; font-size: 13px; line-height: 1.6;">Enter this code on the login screen. It expires in <strong>5 minutes</strong>.</p>

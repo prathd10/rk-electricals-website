@@ -34,13 +34,14 @@ export default function Footer() {
             <li><a href="/about" className="hover:text-pastelBrown-400 transition-colors">About Us</a></li>
             <li><a href="/amc" className="hover:text-pastelBrown-400 transition-colors">AMC Services</a></li>
             <li><a href="/designers" className="hover:text-pastelBrown-400 transition-colors">Interior Designers</a></li>
+            <li><a href="/blogs" className="hover:text-pastelBrown-400 transition-colors">Guides & Insights</a></li>
             <li><a href="/contact" className="hover:text-pastelBrown-400 transition-colors">Contact Us</a></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div className="space-y-10">
-          <h4 className="text-[10px] font-bold uppercase tracking-widest opacity-30">Borivali Studio</h4>
+          <h4 className="text-[10px] font-bold uppercase tracking-widest opacity-30">Borivali Shop</h4>
           <ul className="space-y-4 text-sm opacity-60">
             <li>
               Shop No. 3, Surya Kiran Society,<br />
@@ -66,7 +67,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-site pad pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.2em] opacity-20">
-        <p>© {new Date().getFullYear()} R.K. Electricals. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} RK Electricals. All Rights Reserved.</p>
         <p>Website Developed by Synex AI</p>
       </div>
     </footer>

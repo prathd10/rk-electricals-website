@@ -30,7 +30,7 @@ export default function Sidebar({ onClose }) {
           </div>
           <div>
             <div className="font-serif text-sm tracking-wide leading-tight">RK Admin</div>
-            <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">R.K. Electricals</div>
+            <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">RK Electricals</div>
           </div>
         </div>
         {onClose && (

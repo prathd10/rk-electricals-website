@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { name: 'Portfolio', href: '/#gallery' },
   { name: 'Society AMC', href: '/amc' },
   { name: 'Architects', href: '/designers' },
+  { name: 'Guides', href: '/blogs' },
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
 ]

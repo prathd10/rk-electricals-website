@@ -1,4 +1,4 @@
-# R.K. Electricals — Setup Guide
+# RK Electricals — Setup Guide
 
 ## Prerequisites
 - Node.js 18+ installed
@@ -65,7 +65,7 @@ To authorize client-side image uploads securely to ImageKit, the project include
    ```bash
    supabase functions deploy imagekit-auth
    ```
-This activates direct, secure file uploading inside your R.K. Electricals website dashboard!
+This activates direct, secure file uploading inside your RK Electricals website dashboard!
 
 ---
 

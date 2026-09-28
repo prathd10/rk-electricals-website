@@ -1,0 +1,8 @@
+# robots.txt for RK Electricals Mumbai
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin/*
+
+# Sitemap
+Sitemap: https://rkelectricals.online/sitemap.xml

@@ -15,6 +15,8 @@ import Designers      from './pages/Designers'
 import About          from './pages/About'
 import ContactPage    from './pages/ContactPage'
 import ServicesPage   from './pages/ServicesPage'
+import BlogsPage      from './pages/BlogsPage'
+import BlogPostPage   from './pages/BlogPostPage'
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="/designers" element={<Designers />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
         

@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react'
 import WhatsAppIcon from '../components/ui/WhatsAppIcon'
 import { useReveal } from '../hooks/useInView'
 import { useCreateLead } from '../hooks/useLeads'
+import SEOHead from '../components/common/SEOHead'
 import toast from 'react-hot-toast'
 
 export default function ContactPage() {
@@ -42,6 +43,12 @@ export default function ContactPage() {
 
   return (
     <div className="pt-20 bg-tan-50 min-h-screen" ref={ref}>
+      <SEOHead 
+        title="Contact RK Electricals | Borivali West, Mumbai"
+        description="Get in touch with RK Electricals for emergency repairs, housing society AMC site visits, architect quotes, or visit our retail shop in Borivali West."
+        keywords="contact RK Electricals, electrician contact number Mumbai, Borivali electrician phone, emergency electrician Mumbai"
+        canonicalUrl="https://rkelectricals.online/contact"
+      />
       <section className="pt-6 pb-16 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           
@@ -223,12 +230,14 @@ export default function ContactPage() {
         <div className="max-w-site pad mx-auto">
           <div className="aspect-[21/9] w-full grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000 rounded-3xl overflow-hidden shadow-2xl">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.123456789!2d72.8456789!3d19.2345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1234567890!2sR+K+Electricals!5e0!3m2!1sen!2sin!4v1234567890123" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.8436531!3d19.2307524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b12db71593ef%3A0x8e8334863c87f1ce!2sR.K.%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
               allowFullScreen="" 
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="RK Electricals Shop Location"
             ></iframe>
           </div>
         </div>

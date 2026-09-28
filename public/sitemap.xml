@@ -14,7 +14,67 @@
   </url>
 
   <url>
-    <loc>https://rkelectricals.online/contact</loc>
+    <loc>https://rkelectricals.online/amc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/designers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/electrical-amc-guide-mumbai-housing-societies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/concealed-wiring-vs-surface-wiring-mumbai-homes</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/electrical-hazards-mumbai-high-rises-safety-tips</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/electrical-planning-for-architects-interior-designers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/monsoon-electrical-safety-checklist-mumbai-societies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/cost-of-electrical-rewiring-flats-mumbai-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/why-mcb-keeps-tripping-troubleshooting-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/commercial-electrical-setup-clinics-offices-mumbai</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -26,15 +86,9 @@
   </url>
 
   <url>
-    <loc>https://rkelectricals.online/amc</loc>
+    <loc>https://rkelectricals.online/contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://rkelectricals.online/designers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

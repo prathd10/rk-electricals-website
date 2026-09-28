@@ -34,7 +34,7 @@ export default function TrustSection() {
           </h3>
 
           <p className="text-forest-800/70 text-sm mt-3 leading-relaxed reveal d-150">
-            We are the preferred electrical contracting and AMC partner for housing societies, architects, and commercial properties across Mumbai, delivering zero-compromise safety since 1993.
+            We are the preferred electrical contracting and AMC partner for housing societies, architects, and commercial properties across Mumbai, delivering zero-compromise safety since 1994.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8 reveal d-200">

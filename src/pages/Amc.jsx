@@ -3,6 +3,7 @@ import { ShieldCheck, Zap, Phone, ArrowRight, Building, ClipboardCheck, Clock } 
 import { useReveal } from '../hooks/useInView'
 import { useCreateLead } from '../hooks/useLeads'
 import toast from 'react-hot-toast'
+import SEOHead from '../components/common/SEOHead'
 
 export default function Amc() {
   const ref = useReveal()
@@ -44,6 +45,12 @@ export default function Amc() {
 
   return (
     <div className="pt-20 bg-tan-50 min-h-screen overflow-hidden animate-fade-in" ref={ref}>
+      <SEOHead 
+        title="Housing Society Electrical AMC in Mumbai | RK Electricals"
+        description="Priority electrical maintenance contracts for Mumbai housing societies & commercial complexes. Meter rooms, pump automation, lift backups & 24/7 breakdown dispatch."
+        keywords="housing society electrical AMC Mumbai, society electrician Borivali, commercial electrical AMC, pump room maintenance, meter room audit"
+        canonicalUrl="https://rkelectricals.online/amc"
+      />
       <section className="pt-8 pb-20 pad">
         <div className="max-w-site mx-auto grid lg:grid-cols-2 gap-16 items-center">
           

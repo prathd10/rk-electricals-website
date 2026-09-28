@@ -14,7 +14,7 @@ const STATUS_STYLE = {
   closed:    { badge: 'bg-gray-50 text-gray-500 border-gray-200/50',   dot: 'bg-gray-400'   },
 }
 
-const WA_MSG = encodeURIComponent("Hi! This is R.K. Electricals. We received your enquiry. How can we help you?")
+const WA_MSG = encodeURIComponent("Hi! This is RK Electricals. We received your enquiry. How can we help you?")
 
 export default function LeadsAdmin() {
   const { data: leads = [], isLoading } = useLeads()
