@@ -230,7 +230,7 @@ export default function ContactPage() {
         <div className="max-w-site pad mx-auto">
           <div className="aspect-[21/9] w-full grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000 rounded-3xl overflow-hidden shadow-2xl">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.8436531!3d19.2307524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b12db71593ef%3A0x8e8334863c87f1ce!2sR.K.%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.8436531!3d19.2307524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b12db71593ef%3A0x8e8334863c87f1ce!2sR%20K%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
