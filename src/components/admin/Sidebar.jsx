@@ -26,11 +26,11 @@ export default function Sidebar({ onClose }) {
         <div className="flex items-center gap-2.5">
           {/* Official Brand Logo */}
           <div className="w-9 h-9 rounded-xl overflow-hidden shadow-md">
-            <img src="/logo.png" alt="RK Logo" className="w-full h-full object-cover" />
+            <img src="/logo.png" alt="R K Electricals Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="font-serif text-sm tracking-wide leading-tight">RK Admin</div>
-            <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">RK Electricals</div>
+            <div className="text-white/40 text-[9px] font-bold uppercase tracking-widest mt-0.5">R K Electricals</div>
           </div>
         </div>
         {onClose && (

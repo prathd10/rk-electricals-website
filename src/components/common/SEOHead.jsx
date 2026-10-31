@@ -1,14 +1,21 @@
 import { useEffect } from 'react'
 
+// Filled during the build-time prerender (no window), so each page's HTML gets its own head tags
+export const ssrHead = { current: null }
+
 export default function SEOHead({
-  title = "RK Electricals | Mumbai's Trusted Electricians Since 1994",
-  description = "RK Electricals | Mumbai's trusted electrical contractors since 1994. 30+ years of safe, clean, concealed wiring for homes, offices, and housing societies in Borivali.",
-  keywords = "electrician Mumbai, electrical contractor Borivali, home wiring Mumbai, concealed wiring, AMC electrical, builder electrician Mumbai, RK Electricals",
+  title = "R K Electricals | Mumbai's Trusted Electricians Since 1994",
+  description = "R K Electricals | Mumbai's trusted electrical contractors since 1994. 30+ years of safe, clean, concealed wiring for homes, offices, and housing societies in Borivali.",
+  keywords = "electrician Mumbai, electrical contractor Borivali, home wiring Mumbai, concealed wiring, AMC electrical, builder electrician Mumbai, R K Electricals",
   canonicalUrl = "https://rkelectricals.online",
   ogType = "website",
   ogImage = "https://rkelectricals.online/logo.png",
   schema = null
 }) {
+  if (typeof window === 'undefined') {
+    ssrHead.current = { title, description, keywords, canonicalUrl, ogType, ogImage, schema }
+  }
+
   useEffect(() => {
     // 1. Update document title
     document.title = title
@@ -35,7 +42,7 @@ export default function SEOHead({
     setMetaTag('property', 'og:type', ogType)
     setMetaTag('property', 'og:url', canonicalUrl)
     setMetaTag('property', 'og:image', ogImage)
-    setMetaTag('property', 'og:site_name', 'RK Electricals')
+    setMetaTag('property', 'og:site_name', 'R K Electricals')
 
     // 4. Twitter Tags
     setMetaTag('name', 'twitter:card', 'summary_large_image')

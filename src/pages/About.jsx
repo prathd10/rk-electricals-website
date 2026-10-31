@@ -8,9 +8,9 @@ export default function About() {
   return (
     <div className="pt-24 bg-tan-50 min-h-screen" ref={ref}>
       <SEOHead 
-        title="About RK Electricals | 30+ Years Legacy in Mumbai"
-        description="Learn about RK Electricals — established in 1994 in Borivali West. PWD-licensed electrical contractors with 5,000+ completed projects across Mumbai."
-        keywords="about RK Electricals, electrical contractor history Mumbai, PWD licensed electrician Borivali, Kirit Sheth electrician"
+        title="About R K Electricals | 30+ Years Legacy in Mumbai"
+        description="Learn about R K Electricals — established in 1994 in Borivali West. PWD-licensed electrical contractors with 5,000+ completed projects across Mumbai."
+        keywords="about R K Electricals, electrical contractor history Mumbai, PWD licensed electrician Borivali, Kirit Sheth electrician"
         canonicalUrl="https://rkelectricals.online/about"
       />
       {/* Hero Section */}
@@ -23,7 +23,7 @@ export default function About() {
               <span className="italic font-normal text-forest-600">Electrical Excellence.</span>
             </h1>
             <p className="text-lg text-forest-800/60 mt-12 leading-relaxed reveal d-200">
-              Founded in 1994, RK Electricals began as a small boutique shop in Borivali West. Today, we are one of Mumbai's most trusted PWD-licensed contractors, blending technical mastery with a commitment to safety.
+              Founded in 1994, R K Electricals began as a small boutique shop in Borivali West. Today, we are one of Mumbai's most trusted PWD-licensed contractors, blending technical mastery with a commitment to safety.
             </p>
           </div>
           <div className="reveal d-200">
@@ -74,7 +74,7 @@ export default function About() {
                   "We hide our work so that you can showcase yours."
                 </blockquote>
                 <p>
-                  At RK Electricals, we believe that electrical work is the invisible backbone of any great space. Whether it's the complex wiring of a luxury high-rise or the delicate lighting of a designer home, our approach remains the same: precision, safety, and durability.
+                  At R K Electricals, we believe that electrical work is the invisible backbone of any great space. Whether it's the complex wiring of a luxury high-rise or the delicate lighting of a designer home, our approach remains the same: precision, safety, and durability.
                 </p>
                 <p>
                   Our founder started with a simple vision: to provide Borivali with a one-stop destination for both premium electrical hardware and master-level execution. Today, we continue that tradition, partnering with leading developers and designers to power the future of Mumbai.

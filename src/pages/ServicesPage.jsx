@@ -59,7 +59,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-cream-50 min-h-screen pt-28 pb-20" ref={ref}>
       <SEOHead 
-        title="Electrical Contracting & Maintenance Services Mumbai | RK Electricals"
+        title="Electrical Contracting & Maintenance Services Mumbai | R K Electricals"
         description="Explore electrical contracting, society AMC packages, architect project execution, concealed wiring, and retail repair services in Mumbai."
         keywords="electrical services Mumbai, electrical contracting Borivali, housing society AMC packages, retail electrical shop Borivali"
         canonicalUrl="https://rkelectricals.online/services"

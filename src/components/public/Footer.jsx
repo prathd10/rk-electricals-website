@@ -1,3 +1,5 @@
+import { AREAS } from '../../data/areaData'
+
 export default function Footer() {
   return (
     <footer className="bg-forest-900 text-cream-50 pt-32 pb-16 overflow-hidden">
@@ -6,7 +8,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-10">
           <div className="flex flex-col">
-            <span className="font-serif text-3xl tracking-tight">RK ELECTRICALS</span>
+            <span className="font-serif text-3xl tracking-tight">R K ELECTRICALS</span>
             <span className="text-[10px] uppercase tracking-[0.4em] opacity-40 font-bold mt-2">Design Led · Technically Sound</span>
           </div>
           <p className="opacity-40 text-sm leading-relaxed max-w-xs">
@@ -22,6 +24,12 @@ export default function Footer() {
             <li>Gadget & Appliance Repair</li>
             <li>Society Maintenance (AMC)</li>
             <li>In-House Equipment Shop</li>
+          </ul>
+          <h4 className="text-[10px] font-bold uppercase tracking-widest opacity-30">Areas We Serve</h4>
+          <ul className="space-y-4 text-sm">
+            {AREAS.map(a => (
+              <li key={a.slug}><a href={`/${a.slug}`} className="hover:text-pastelBrown-400 transition-colors">Electrician in {a.name}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -67,7 +75,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-site pad pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-10 text-[10px] uppercase tracking-[0.2em] opacity-20">
-        <p>© {new Date().getFullYear()} RK Electricals. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} R K Electricals. All Rights Reserved.</p>
         <p>Website Developed by Synex AI</p>
       </div>
     </footer>

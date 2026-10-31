@@ -219,14 +219,14 @@ export default function Contact() {
       <div className="max-w-site mx-auto px-4 sm:px-6 lg:px-8 mt-24 reveal d-300">
         <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-forest-100/50 relative bg-gray-100">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.8436531!3d19.2307524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1258a9cf4ad%3A0x3dec908eb263abd8!2sR%20K%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.9252329868735!2d72.843016!3d19.2328239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1258a9cf4ad%3A0x3dec908eb263abd8!2sR%20K%20Electricals!5e0!3m2!1sen!2sin!4v1716382092147!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
             allowFullScreen="" 
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
-            title="RK Electricals Shop Location"
+            title="R K Electricals Shop Location"
           ></iframe>
         </div>
       </div>

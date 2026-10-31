@@ -56,7 +56,7 @@ export default function BlogPostPage() {
         },
         "publisher": {
           "@type": "LocalBusiness",
-          "name": "RK Electricals",
+          "name": "R K Electricals",
           "logo": {
             "@type": "ImageObject",
             "url": "https://rkelectricals.online/logo.png"
@@ -107,7 +107,7 @@ export default function BlogPostPage() {
   return (
     <div className="pt-28 bg-tan-50 min-h-screen">
       <SEOHead 
-        title={`${post.metaTitle} | RK Electricals Mumbai`}
+        title={post.metaTitle}
         description={post.metaDescription}
         keywords={post.keywords.join(', ')}
         canonicalUrl={`https://rkelectricals.online/blogs/${post.slug}`}
@@ -257,7 +257,7 @@ export default function BlogPostPage() {
               </span>
             </div>
             <p className="text-xs text-forest-800/70 leading-relaxed font-sans mb-4">
-              RK Electricals has provided uninterrupted electrical contracting, society AMC services, and precision concealed wiring across Mumbai since 1994. Authorized for major residential, commercial, and builder infrastructure projects.
+              R K Electricals has provided uninterrupted electrical contracting, society AMC services, and precision concealed wiring across Mumbai since 1994. Authorized for major residential, commercial, and builder infrastructure projects.
             </p>
             <div className="flex flex-wrap gap-4 text-[11px] font-bold uppercase tracking-wider text-forest-800">
               <a href="tel:+919779979519" className="hover:text-pastelBrown-600 flex items-center gap-1.5">

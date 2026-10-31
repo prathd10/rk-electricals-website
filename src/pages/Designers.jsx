@@ -45,7 +45,7 @@ export default function Designers() {
   return (
     <div className="pt-20 bg-cream-50 min-h-screen overflow-hidden" ref={ref}>
       <SEOHead 
-        title="Electrical Contracting for Architects & Designers | RK Electricals"
+        title="Electrical Contracting for Architects & Designers | R K Electricals"
         description="Electrical execution partner for Mumbai architects & interior designers. Luxury architectural lighting, magnetic track lights, 3-phase balancing & smart home conduits."
         keywords="architect electrical contractor Mumbai, interior designer electrician Borivali, luxury lighting wiring, smart automation conduit planning"
         canonicalUrl="https://rkelectricals.online/designers"

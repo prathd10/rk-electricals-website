@@ -44,7 +44,7 @@ export default function Header() {
           <a href="/" className="flex items-center gap-4 group">
             <img 
               src="/rkelectricals-logo-cropped.png" 
-              alt="RK Electricals" 
+              alt="R K Electricals" 
               className={`h-6 md:h-8 w-auto object-contain translate-y-1 transition-all duration-500 ${isLightText ? 'brightness-0 invert opacity-90' : 'opacity-100'}`}
             />
           </a>
@@ -99,7 +99,7 @@ export default function Header() {
           <div className="flex items-center justify-between mb-12">
             <img 
               src="/rkelectricals-logo-cropped.png" 
-              alt="RK Electricals" 
+              alt="R K Electricals" 
               className="h-6 md:h-8 w-auto object-contain translate-y-1 brightness-0 invert opacity-90"
             />
             <button 

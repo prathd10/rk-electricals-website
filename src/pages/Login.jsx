@@ -147,9 +147,9 @@ export default function Login() {
       {/* Brand */}
       <div className="flex flex-col items-center mb-10 select-none">
         <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(45,74,67,0.05)] mb-4">
-          <img src="/logo.png" alt="RK Electricals Logo" className="w-full h-full object-cover" />
+          <img src="/logo.png" alt="R K Electricals Logo" className="w-full h-full object-cover" />
         </div>
-        <span className="font-serif text-2xl tracking-tight text-forest-800 uppercase">RK ELECTRICALS</span>
+        <span className="font-serif text-2xl tracking-tight text-forest-800 uppercase">R K ELECTRICALS</span>
         <span className="text-[9px] uppercase tracking-[0.3em] text-forest-800/40 font-bold mt-2">Design Led · Technically Sound</span>
       </div>
 

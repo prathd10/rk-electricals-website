@@ -17,10 +17,12 @@ import ContactPage    from './pages/ContactPage'
 import ServicesPage   from './pages/ServicesPage'
 import BlogsPage      from './pages/BlogsPage'
 import BlogPostPage   from './pages/BlogPostPage'
+import AreaPage       from './pages/AreaPage'
+import { AREAS }      from './data/areaData'
 
-export default function App() {
+// Routes are shared by the browser app and the build-time prerender
+export function AppRoutes() {
   return (
-    <BrowserRouter>
       <Routes>
         {/* Public */}
         <Route element={<PublicLayout />}>
@@ -32,6 +34,9 @@ export default function App() {
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogPostPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          {AREAS.map(a => (
+            <Route key={a.slug} path={`/${a.slug}`} element={<AreaPage area={a} />} />
+          ))}
         </Route>
         
         <Route path="/admin/login" element={<Login />} />
@@ -54,6 +59,13 @@ export default function App() {
         {/* Catch-all */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   )
 }

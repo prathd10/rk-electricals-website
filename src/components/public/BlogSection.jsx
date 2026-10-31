@@ -91,7 +91,7 @@ export default function BlogSection() {
                     Read Article
                   </a>
                   <span className="text-[10px] text-forest-800/40 font-medium">
-                    By {post.author.split(' ')[0]}
+                    By {post.author.startsWith('R K Electricals') ? 'R K Electricals' : post.author.split(' ')[0]}
                   </span>
                 </div>
               </div>

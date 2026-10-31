@@ -46,7 +46,7 @@ export default function Amc() {
   return (
     <div className="pt-20 bg-tan-50 min-h-screen overflow-hidden animate-fade-in" ref={ref}>
       <SEOHead 
-        title="Housing Society Electrical AMC in Mumbai | RK Electricals"
+        title="Housing Society Electrical AMC in Mumbai | R K Electricals"
         description="Priority electrical maintenance contracts for Mumbai housing societies & commercial complexes. Meter rooms, pump automation, lift backups & 24/7 breakdown dispatch."
         keywords="housing society electrical AMC Mumbai, society electrician Borivali, commercial electrical AMC, pump room maintenance, meter room audit"
         canonicalUrl="https://rkelectricals.online/amc"

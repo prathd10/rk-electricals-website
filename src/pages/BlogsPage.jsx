@@ -22,12 +22,12 @@ export default function BlogsPage() {
   const blogListSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "RK Electricals Knowledge Base & Mumbai Electrical Guides",
+    "name": "R K Electricals Knowledge Base & Mumbai Electrical Guides",
     "description": "Expert advice, safety guidelines, and electrical contracting tips for Mumbai housing societies, homeowners, and interior designers.",
     "url": "https://rkelectricals.online/blogs",
     "publisher": {
       "@type": "LocalBusiness",
-      "name": "RK Electricals",
+      "name": "R K Electricals",
       "logo": "https://rkelectricals.online/logo.png"
     },
     "blogPost": BLOG_POSTS.map(post => ({
@@ -47,9 +47,9 @@ export default function BlogsPage() {
   return (
     <div className="pt-28 bg-tan-50 min-h-screen" ref={ref}>
       <SEOHead 
-        title="Electrical Guides & AMC Insights Mumbai | RK Electricals"
+        title="Electrical Guides & AMC Insights Mumbai | R K Electricals"
         description="Explore expert guides on housing society electrical AMC, residential concealed wiring, fire safety audits, and architectural lighting in Mumbai."
-        keywords="electrical blog Mumbai, housing society AMC guide, concealed wiring tips Borivali, electrical safety audit Mumbai, RK Electricals guides"
+        keywords="electrical blog Mumbai, housing society AMC guide, concealed wiring tips Borivali, electrical safety audit Mumbai, R K Electricals guides"
         canonicalUrl="https://rkelectricals.online/blogs"
         schema={blogListSchema}
       />
@@ -171,7 +171,7 @@ export default function BlogsPage() {
                         Read Full Guide
                       </a>
                       <span className="text-[10px] text-forest-800/40 font-medium">
-                        {post.author.split(' ')[0]}
+                        {post.author.startsWith('R K Electricals') ? 'R K Electricals' : post.author.split(' ')[0]}
                       </span>
                     </div>
                   </div>

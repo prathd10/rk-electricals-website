@@ -14,24 +14,25 @@ export default function Home() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "Electrician",
-    "name": "RK Electricals",
+    "name": "R K Electricals",
     "image": "https://rkelectricals.online/logo.png",
     "@id": "https://rkelectricals.online/#organization",
     "url": "https://rkelectricals.online",
     "telephone": "+919779979519",
     "priceRange": "₹₹",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=R+K+Electricals&query_place_id=ChIJrfSciiWx5zsR2Ktjso6Q7D0",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Shop No. 3, Surya Kiran Society, Jairaj Nagar, Baburao Paranjape Marg",
-      "addressLocality": "Borivali West",
-      "addressRegion": "Mumbai, Maharashtra",
+      "streetAddress": "Shop No. 3, Surya Kiran Society, Jairaj Nagar, Baburao Paranjape Marg, Vazira, Borivali West",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
       "postalCode": "400091",
       "addressCountry": "IN"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 19.2307524,
-      "longitude": 72.8436531
+      "latitude": 19.2328239,
+      "longitude": 72.843016
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -61,9 +62,9 @@ export default function Home() {
   return (
     <>
       <SEOHead 
-        title="RK Electricals | Mumbai's Trusted Electricians Since 1994"
-        description="RK Electricals | Mumbai's premier electrical contractors since 1994. 30+ years of high-rise society AMC, residential concealed wiring, and architectural installations."
-        keywords="electrician Mumbai, electrical contractor Borivali, housing society electrical AMC, concealed wiring Mumbai, PWD licensed contractor, RK Electricals"
+        title="R K Electricals | Mumbai's Trusted Electricians Since 1994"
+        description="R K Electricals | Mumbai's premier electrical contractors since 1994. 30+ years of high-rise society AMC, residential concealed wiring, and architectural installations."
+        keywords="electrician Mumbai, electrical contractor Borivali, housing society electrical AMC, concealed wiring Mumbai, PWD licensed contractor, R K Electricals"
         canonicalUrl="https://rkelectricals.online"
         schema={localBusinessSchema}
       />

@@ -80,6 +80,24 @@
   </url>
 
   <url>
+    <loc>https://rkelectricals.online/blogs/diwali-lighting-electrical-safety-mumbai-homes-societies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/ev-charger-installation-mumbai-housing-societies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/blogs/earthing-rccb-electrical-safety-mumbai-flats</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://rkelectricals.online/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -89,6 +107,31 @@
     <loc>https://rkelectricals.online/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+
+  <url>
+    <loc>https://rkelectricals.online/electrician-borivali-west</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/electrician-kandivali-west</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/electrician-dahisar-west</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://rkelectricals.online/electrician-malad-west</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

@@ -1,9 +1,203 @@
 export const BLOG_POSTS = [
   {
+    id: 'diwali-lighting-electrical-safety-mumbai-homes-societies',
+    slug: 'diwali-lighting-electrical-safety-mumbai-homes-societies',
+    title: 'Diwali Lighting Safety: Electrical Checklist for Mumbai Homes & Housing Societies',
+    metaTitle: 'Diwali Lighting Electrical Safety Tips Mumbai | R K Electricals',
+    metaDescription: 'Planning Diwali lights and lanterns? A practical electrical safety checklist for Mumbai flats and housing societies — avoid overloaded sockets, tripping MCBs and short circuits.',
+    category: 'Safety & Audits',
+    publishDate: 'October 31, 2026',
+    readTime: '5 min read',
+    author: 'Kirit Sheth (Founder & Lead Contractor)',
+    summary: 'Serial lights, lanterns and building facade decorations add a lot of load to old wiring in a very short time. Here is how Mumbai families and society committees can enjoy a bright Diwali without burnt sockets, tripping MCBs or fire risks.',
+    coverImage: 'https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?w=1000&q=80',
+    keywords: [
+      'Diwali lighting safety Mumbai',
+      'Diwali electrical safety tips',
+      'society Diwali decoration lighting electrician',
+      'serial lights short circuit prevention',
+      'electrician Borivali Diwali lighting'
+    ],
+    keyTakeaways: [
+      'Never chain multiple extension boards together — one overloaded multi-plug is the most common Diwali fire cause.',
+      'Use ISI-marked serial lights and check every string for cut or pinched wires before switching on.',
+      'Outdoor and balcony lights should run on an RCCB-protected circuit to guard against shocks in damp conditions.',
+      'Society facade and compound lighting should be planned on a separate, temporary circuit — not tapped from lift or pump supply.'
+    ],
+    content: [
+      {
+        heading: 'Why Diwali Puts Extra Stress on Mumbai Wiring',
+        text: 'Many Mumbai buildings still run on wiring installed 20 to 30 years ago, sized for a few lights and fans. During Diwali, the same sockets suddenly power serial lights, lanterns, decorative lamps, music systems and extra kitchen appliances for guests — often for 6 to 8 hours every evening. Loose sockets, undersized extension cords and old aluminium wiring heat up under this load, which is why electricians see a spike in burnt switchboards and tripping MCBs every festive season.'
+      },
+      {
+        heading: '1. Check Your Lights Before You Hang Them',
+        text: 'Lay out every string of serial lights and inspect it before installation. Discard strings with cracked insulation, exposed copper, missing bulbs or melted plugs. Buy ISI-marked lights from a reliable shop rather than unbranded street stock — cheap strings often use very thin wire that overheats. Never staple, nail or tightly tie wires to grills; a pinched wire can short circuit days later.'
+      },
+      {
+        heading: '2. Don\'t Overload Sockets or Chain Extension Boards',
+        text: 'Plugging one multi-plug into another to reach the balcony is the single most common Diwali hazard. Run each set of decorations from a separate wall socket where possible, use one good-quality extension board with a built-in fuse or switch per socket, and keep heavy appliances like microwaves, irons and room heaters on their own sockets. If a plug or board feels warm to the touch, switch it off and reduce the load.'
+      },
+      {
+        heading: '3. Keep Outdoor and Balcony Lights Shock-Safe',
+        text: 'Balconies, terraces and building entrances get damp from dew and early-morning moisture. Use lights rated for outdoor use, keep plug joints off the floor and away from plant pots or water, and make sure these circuits are protected by a 30mA RCCB, which cuts power within milliseconds if current leaks to earth. If your flat has only MCBs and no RCCB, Diwali is a good time to get one installed.'
+      },
+      {
+        heading: '4. For Housing Societies: Plan Facade Lighting Properly',
+        text: 'Society committees often decorate the building facade, gate and compound. This load should be planned by a licensed electrician on a separate temporary distribution board with its own MCB and RCCB — never tapped from the lift, water pump or fire-fighting panels. Cables running across the compound should be routed overhead or protected so vehicles and children cannot damage them, and all connections should be weatherproofed.'
+      },
+      {
+        heading: '5. Switch Off When You Leave',
+        text: 'Use a timer or switch off decorations before going to sleep or leaving home. Keep lights and lanterns away from curtains, diyas and rangoli candles, and keep a clear path to your main switch so you can cut power quickly if needed.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Why does my MCB trip when I switch on Diwali lights?',
+        answer: 'Usually the circuit is overloaded, or a damaged light string or wet outdoor connection is leaking current. Unplug the decorations, reset the MCB and reconnect strings one at a time to find the faulty one. If it keeps tripping, have an electrician check the circuit.'
+      },
+      {
+        question: 'Are LED serial lights safer than old bulb lights?',
+        answer: 'Yes. LED strings draw far less current and run much cooler than old incandescent bulb strings, which reduces the load on your sockets. They still need to be ISI-marked and free of damaged wires.'
+      },
+      {
+        question: 'Does R K Electricals install festive lighting for housing societies?',
+        answer: 'Yes. We plan and install temporary facade, gate and compound lighting for housing societies and shops in Borivali and nearby areas, on separate protected circuits, and remove it safely after the festive season.'
+      }
+    ]
+  },
+  {
+    id: 'ev-charger-installation-mumbai-housing-societies',
+    slug: 'ev-charger-installation-mumbai-housing-societies',
+    title: 'EV Charger Installation in Mumbai Housing Societies: A Practical Guide',
+    metaTitle: 'EV Charger Installation in Mumbai Societies | R K Electricals',
+    metaDescription: 'Planning an EV charger in your Mumbai society parking? Learn about charger types, load checks, wiring, metering and society approvals before you install.',
+    category: 'Society AMC',
+    publishDate: 'October 29, 2026',
+    readTime: '6 min read',
+    author: 'R K Electricals Technical Team',
+    summary: 'More Mumbai residents are buying electric cars and scooters, but charging in a shared society parking needs proper planning. Here is what flat owners and society committees should check before installing an EV charger.',
+    coverImage: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1000&q=80',
+    keywords: [
+      'EV charger installation Mumbai',
+      'EV charging housing society Mumbai',
+      'home EV charger electrician Borivali',
+      '7kW EV charger wiring',
+      'society parking EV charging point'
+    ],
+    keyTakeaways: [
+      'Most home EV charging uses either a portable 15A socket charger or a 7kW wall-mounted charger.',
+      'A load check of the meter and building supply is essential before adding a charger.',
+      'Every charger needs its own dedicated circuit with correctly sized cable, MCB, RCCB and proper earthing.',
+      'Societies should agree on metering and billing before installation to avoid disputes later.'
+    ],
+    content: [
+      {
+        heading: 'Why EV Charging Needs Planning in Mumbai Buildings',
+        text: 'Electric cars and scooters are becoming common in Mumbai suburbs, but most housing society parking areas were never designed for charging. Running a long extension cord from a flat or tapping an existing common-area socket is unsafe — an EV draws high current continuously for hours, which old wiring and shared circuits cannot handle. A properly planned charging point protects both the vehicle and the building.'
+      },
+      {
+        heading: '1. Choose the Right Type of Charger',
+        text: 'Most electric scooters and many cars come with a portable charger that plugs into a 15A socket and is suitable for overnight charging. For faster home charging, a wall-mounted charger of around 7kW is common for cars and can typically charge a car overnight in a few hours. Higher-power three-phase chargers are possible but need a three-phase supply and a larger load sanction. Your car manufacturer\'s guidance is the best starting point.'
+      },
+      {
+        heading: '2. Get a Load Check Done First',
+        text: 'Before installation, a licensed electrician should check the sanctioned load on your meter, the condition of your distribution board and the capacity of the building\'s supply. A 7kW charger adds a significant continuous load, so some flats may need a load enhancement from the electricity distributor — in Borivali and most of the western suburbs that is Adani Electricity. We help prepare the load calculation and test report needed for such applications.'
+      },
+      {
+        heading: '3. Dedicated Circuit, Protection and Earthing',
+        text: 'Every EV charging point should have its own dedicated circuit from the distribution board, with copper cable sized for the charger\'s current over the full cable run, its own MCB, an RCCB suitable for EV charging, and a reliable earth connection. In parking areas the cable should run through proper conduits or cable trays, and the charger should be mounted where it is protected from water and vehicle impact.'
+      },
+      {
+        heading: '4. Metering and Society Approval',
+        text: 'The simplest and fairest setup is to connect the charger to the owner\'s own flat meter, with the cable run from the meter room to the parking slot. Where that is not practical, societies can install a separate sub-meter for each charging point. Agree on the cable route, metering and billing in writing with the society committee before work begins — it prevents disputes later and makes future chargers easier to add.'
+      },
+      {
+        heading: 'Planning for the Whole Society',
+        text: 'If several residents are interested, it is more economical for the society to plan common EV-ready infrastructure at once — a dedicated cable route, a small distribution panel in the parking area and space for future chargers — instead of each owner running separate cables. This also keeps the parking area neat and safer.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Can I charge my electric car from a normal plug point?',
+        answer: 'Only with the portable charger supplied by the manufacturer, and only from a dedicated 15A socket in good condition. Avoid extension cords and shared common-area sockets, as continuous high current can overheat them.'
+      },
+      {
+        question: 'Do I need permission from my society to install an EV charger?',
+        answer: 'Yes. Because the cable usually passes through common areas and the charger is installed in shared parking, you should get written approval from your society committee for the cable route and metering arrangement.'
+      },
+      {
+        question: 'Does R K Electricals install EV chargers in Borivali?',
+        answer: 'Yes. We carry out load checks, dedicated circuit wiring, earthing and charger installation for flats and housing societies in Borivali, Kandivali, Dahisar and nearby areas.'
+      }
+    ]
+  },
+  {
+    id: 'earthing-rccb-electrical-safety-mumbai-flats',
+    slug: 'earthing-rccb-electrical-safety-mumbai-flats',
+    title: 'Earthing & RCCB: Why Every Mumbai Flat Needs Both for Shock Safety',
+    metaTitle: 'Earthing & RCCB Safety Guide for Mumbai Flats | R K Electricals',
+    metaDescription: 'Getting mild shocks from appliances or taps? Learn how earthing and RCCBs protect your family, the warning signs of poor earthing, and how to get it tested in Mumbai.',
+    category: 'Residential Wiring',
+    publishDate: 'October 27, 2026',
+    readTime: '5 min read',
+    author: 'Kirit Sheth (Founder & Lead Contractor)',
+    summary: 'Mild tingling from a washing machine, geyser or metal tap is a warning sign that many Mumbai families ignore. Here is how earthing and RCCBs work together to protect you, and when your flat needs an upgrade.',
+    coverImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1000&q=80',
+    keywords: [
+      'earthing check Mumbai flat',
+      'RCCB installation Mumbai',
+      'electric shock from washing machine',
+      'earthing electrician Borivali',
+      'MCB vs RCCB difference'
+    ],
+    keyTakeaways: [
+      'An MCB protects wiring from overload and short circuit — it does not protect people from shocks.',
+      'An RCCB detects current leaking to earth and cuts power almost instantly, protecting against electric shock.',
+      'Good earthing gives fault current a safe path; poor earthing in older buildings is common after years of Mumbai humidity.',
+      'Tingling from appliances, taps or switchboards means your earthing should be tested immediately.'
+    ],
+    content: [
+      {
+        heading: 'The Difference Between an MCB and an RCCB',
+        text: 'Most Mumbai flats have MCBs (Miniature Circuit Breakers) in the distribution board. An MCB trips when a circuit draws too much current — it protects your wiring from overheating, but it does not react to the small leakage currents that cause electric shocks. An RCCB (Residual Current Circuit Breaker) constantly compares the current going out and coming back; if even a small amount is leaking — through a faulty appliance or a person — it cuts the supply in a fraction of a second. For homes, a 30mA RCCB is the standard choice for personal protection.'
+      },
+      {
+        heading: 'What Earthing Does',
+        text: 'Earthing connects the metal bodies of appliances and the earth pin of every socket to the ground through an earth wire and earthing pit. If a live wire touches the metal body of a washing machine, geyser or refrigerator, the fault current flows safely to earth instead of through the person touching it — and the RCCB or MCB trips. Without good earthing, that metal body can stay live and dangerous.'
+      },
+      {
+        heading: 'Warning Signs of Poor Earthing',
+        text: 'Watch for mild tingling when touching a washing machine, geyser, metal tap, fridge door or switchboard; frequent unexplained RCCB trips; flickering lights; or electronic appliances failing more often than they should. In older buildings, earthing pits dry out or corrode over the years, especially with Mumbai\'s coastal humidity, and earth wires inside flats are sometimes missing or disconnected after renovations.'
+      },
+      {
+        heading: 'How Earthing Is Tested and Fixed',
+        text: 'A licensed electrician tests earth resistance at the earthing pit and checks earth continuity at every socket and appliance point in the flat. Fixes can include running a proper earth wire to all points, repairing loose connections in the distribution board, or recommending that the society refurbish or add a new earthing pit. Earthing pits should ideally be tested before and after every monsoon.'
+      },
+      {
+        heading: 'When to Add an RCCB',
+        text: 'If your distribution board has only MCBs, adding an RCCB is one of the most cost-effective safety upgrades you can make — especially in homes with children, elderly family members, or appliances used near water like washing machines and geysers. It can usually be installed in your existing board within a few hours.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Why do I get a mild shock from my washing machine?',
+        answer: 'It usually means current is leaking to the machine\'s metal body and the earthing is not taking it away safely. Stop using the appliance, switch it off at the socket and have the earthing and appliance checked by an electrician.'
+      },
+      {
+        question: 'My RCCB keeps tripping. Should I remove it?',
+        answer: 'No. A tripping RCCB means it has detected leakage somewhere — often a faulty appliance, damp wiring or a water heater element. Have the fault traced and fixed instead of bypassing the protection.'
+      },
+      {
+        question: 'Does R K Electricals test earthing in Borivali flats and societies?',
+        answer: 'Yes. We test earthing pits and earth continuity, install RCCBs and earthing upgrades for flats, shops and housing societies across Borivali and the western suburbs.'
+      }
+    ]
+  },
+  {
     id: 'electrical-amc-guide-mumbai-housing-societies',
     slug: 'electrical-amc-guide-mumbai-housing-societies',
     title: 'Complete Electrical AMC Guide for Mumbai Housing Societies (2026)',
-    metaTitle: 'Housing Society Electrical AMC Guide Mumbai | RK Electricals',
+    metaTitle: 'Housing Society Electrical AMC Guide Mumbai | R K Electricals',
     metaDescription: 'Essential electrical AMC guide for Mumbai residential societies. Learn how to prevent pump room failures, panel burnouts, and lift outages.',
     category: 'Society AMC',
     publishDate: 'September 15, 2026',
@@ -56,8 +250,8 @@ export const BLOG_POSTS = [
         answer: 'Earthing pits should be tested at least twice a year — once before the monsoon (May) to ensure low resistance (< 5 ohms) and once post-monsoon (October).'
       },
       {
-        question: 'Does RK Electricals provide PWD compliance certificates?',
-        answer: 'Yes, RK Electricals is a PWD-licensed contractor authorized to conduct safety audits, issue load assessment reports, and provide society compliance certificates.'
+        question: 'Does R K Electricals provide PWD compliance certificates?',
+        answer: 'Yes, R K Electricals is a PWD-licensed contractor authorized to conduct safety audits, issue load assessment reports, and provide society compliance certificates.'
       }
     ]
   },
@@ -65,12 +259,12 @@ export const BLOG_POSTS = [
     id: 'concealed-wiring-vs-surface-wiring-mumbai-homes',
     slug: 'concealed-wiring-vs-surface-wiring-mumbai-homes',
     title: 'Concealed Wiring vs Surface Wiring: Mumbai Homeowner & Renovation Guide',
-    metaTitle: 'Concealed vs Surface Wiring Guide Mumbai | RK Electricals',
+    metaTitle: 'Concealed vs Surface Wiring Guide Mumbai | R K Electricals',
     metaDescription: 'Planning home renovation in Mumbai? Compare concealed vs surface casing wiring: costs, durability, aesthetics, and safety for flats and apartments.',
     category: 'Residential Wiring',
     publishDate: 'September 18, 2026',
     readTime: '5 min read',
-    author: 'RK Electricals Technical Team',
+    author: 'R K Electricals Technical Team',
     summary: 'Upgrading your apartment in Borivali, Kandivali, or Mumbai suburbs? Here is everything you need to know about concealed PVC conduits versus surface casing-capping wiring.',
     coverImage: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1000&q=80',
     keywords: [
@@ -119,7 +313,7 @@ export const BLOG_POSTS = [
     id: 'electrical-hazards-mumbai-high-rises-safety-tips',
     slug: 'electrical-hazards-mumbai-high-rises-safety-tips',
     title: 'Top 5 Electrical Hazards in Mumbai High-Rises & How to Prevent Them',
-    metaTitle: '5 High-Rise Electrical Hazards & Safety Tips Mumbai | RK Electricals',
+    metaTitle: '5 High-Rise Electrical Hazards & Safety Tips Mumbai | R K Electricals',
     metaDescription: 'Protect your Mumbai home and society from short circuits, voltage spikes, and neutral failures with these expert electrical safety tips.',
     category: 'Safety & Audits',
     publishDate: 'September 22, 2026',
@@ -173,12 +367,12 @@ export const BLOG_POSTS = [
     id: 'electrical-planning-for-architects-interior-designers',
     slug: 'electrical-planning-for-architects-interior-designers',
     title: 'Architect’s Guide to Electrical Planning: Luxury Lighting, Loads & Automation',
-    metaTitle: 'Electrical Planning Guide for Architects & Designers | RK Electricals',
+    metaTitle: 'Electrical Planning Guide for Architects & Designers | R K Electricals',
     metaDescription: 'Master luxury lighting layout, load calculations, 3-phase balancing, and automation conduits for premium interior projects in Mumbai.',
     category: 'Design & Lighting',
     publishDate: 'September 25, 2026',
     readTime: '5 min read',
-    author: 'RK Electricals Project Studio',
+    author: 'R K Electricals Project Studio',
     summary: 'Collaborating on luxury residential and commercial fit-outs in Mumbai? Here is how architects and contractors ensure flawless execution of architectural lighting and smart home systems.',
     coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=80',
     keywords: [
@@ -214,7 +408,7 @@ export const BLOG_POSTS = [
     ],
     faqs: [
       {
-        question: 'Does RK Electricals work from AutoCAD electrical schematics?',
+        question: 'Does R K Electricals work from AutoCAD electrical schematics?',
         answer: 'Yes! We collaborate closely with interior designers and architects, executing conduit routes, switch heights, loop diagrams, and DB schedules directly from your CAD drawings.'
       },
       {
@@ -227,7 +421,7 @@ export const BLOG_POSTS = [
     id: 'monsoon-electrical-safety-checklist-mumbai-societies',
     slug: 'monsoon-electrical-safety-checklist-mumbai-societies',
     title: 'Monsoon Electrical Safety Checklist for Mumbai Housing Societies',
-    metaTitle: 'Monsoon Electrical Safety Checklist Mumbai Societies | RK Electricals',
+    metaTitle: 'Monsoon Electrical Safety Checklist Mumbai Societies | R K Electricals',
     metaDescription: 'Pre-monsoon electrical audit checklist for Mumbai residential societies: water ingress in meter rooms, earthing tests, submersible pump protection & RCCB tests.',
     category: 'Society AMC',
     publishDate: 'September 26, 2026',
@@ -285,12 +479,12 @@ export const BLOG_POSTS = [
     id: 'cost-of-electrical-rewiring-flats-mumbai-guide',
     slug: 'cost-of-electrical-rewiring-flats-mumbai-guide',
     title: 'Cost Breakdown: Electrical Rewiring for 1BHK, 2BHK & 3BHK Flats in Mumbai (2026)',
-    metaTitle: 'Cost of Flat Electrical Rewiring in Mumbai (2026) | RK Electricals',
+    metaTitle: 'Cost of Flat Electrical Rewiring in Mumbai (2026) | R K Electricals',
     metaDescription: 'Complete cost guide for 1BHK, 2BHK, 3BHK flat electrical rewiring in Mumbai. Material costs (Polycab, GM, Legrand), labor rates, and point-wise estimations.',
     category: 'Residential Wiring',
     publishDate: 'September 27, 2026',
     readTime: '7 min read',
-    author: 'RK Electricals Estimations Team',
+    author: 'R K Electricals Estimations Team',
     summary: 'Planning an interior electrical makeover in Borivali, Kandivali, or Mumbai suburbs? Here is a transparent, realistic breakdown of electrical point costs, materials, and labor.',
     coverImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=80',
     keywords: [
@@ -339,7 +533,7 @@ export const BLOG_POSTS = [
     id: 'why-mcb-keeps-tripping-troubleshooting-guide',
     slug: 'why-mcb-keeps-tripping-troubleshooting-guide',
     title: 'Why Does Your MCB Keep Tripping? Homeowner’s Diagnostic Guide',
-    metaTitle: 'Why Does Your MCB Keep Tripping? Diagnostic Guide | RK Electricals',
+    metaTitle: 'Why Does Your MCB Keep Tripping? Diagnostic Guide | R K Electricals',
     metaDescription: 'Is your MCB or main breaker constantly tripping? Learn the 5 most common causes — overloads, short circuits, ground faults, and faulty appliances — and how to fix them safely.',
     category: 'Safety & Audits',
     publishDate: 'September 28, 2026',
@@ -397,12 +591,12 @@ export const BLOG_POSTS = [
     id: 'commercial-electrical-setup-clinics-offices-mumbai',
     slug: 'commercial-electrical-setup-clinics-offices-mumbai',
     title: 'Commercial Electrical Setup for Clinics, Retail Showrooms & Offices in Mumbai',
-    metaTitle: 'Commercial Electrical Setup: Clinics & Offices Mumbai | RK Electricals',
+    metaTitle: 'Commercial Electrical Setup: Clinics & Offices Mumbai | R K Electricals',
     metaDescription: 'PWD-certified commercial electrical solutions for Mumbai clinics, retail shops, and corporate offices. 3-phase load approvals, UPS isolation, and energy-efficient lighting.',
     category: 'Design & Lighting',
     publishDate: 'September 28, 2026',
     readTime: '6 min read',
-    author: 'RK Electricals Commercial Division',
+    author: 'R K Electricals Commercial Division',
     summary: 'Powering dental clinics, diagnostic labs, boutique retail shops, and modern offices in Mumbai requires specialized voltage stability, isolated earthing, and strict PWD compliance.',
     coverImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80',
     keywords: [

@@ -1,4 +1,4 @@
-# robots.txt for RK Electricals Mumbai
+# robots.txt for R K Electricals Mumbai
 User-agent: *
 Allow: /
 Disallow: /admin/
