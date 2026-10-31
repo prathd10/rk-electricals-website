@@ -70,7 +70,7 @@ export default function Testimonials() {
           <div className="reveal d-200 text-left">
             <p className="text-forest-800 font-bold mb-4 italic text-lg whitespace-nowrap">"Your feedback powers our excellence."</p>
             <a 
-              href="https://www.google.com/search?q=R+K+Electricals+Borivali+West" 
+              href="https://search.google.com/local/writereview?placeid=ChIJrfSciiWx5zsR2Ktjso6Q7D0" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-4 bg-forest-800 px-10 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white hover:bg-pastelBrown-500 transition-all duration-500 shadow-xl shadow-forest-800/20"

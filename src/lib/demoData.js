@@ -73,7 +73,7 @@ export const DEMO_PROJECTS = [
     title: 'Industrial Control Panels',
     description: 'Custom-built power distribution boards and safety switchgear for a manufacturing unit.',
     category: 'commercial',
-    image_url: 'https://images.unsplash.com/photo-1454165833267-033f2a5ef3df?w=800&q=80',
+    image_url: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
     is_active: true,
   },
   {

@@ -57,7 +57,7 @@ export default function RetailServicesSection() {
 
         <div className="mt-14 reveal d-400">
           <a 
-            href="https://www.google.com/maps/place/R+K+Electricals/@19.2327822,72.8430844,17z" 
+            href="https://www.google.com/maps/search/?api=1&query=R+K+Electricals&query_place_id=ChIJrfSciiWx5zsR2Ktjso6Q7D0" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-underline text-[10px]"

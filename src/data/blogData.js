@@ -292,7 +292,7 @@ export const BLOG_POSTS = [
     readTime: '7 min read',
     author: 'RK Electricals Estimations Team',
     summary: 'Planning an interior electrical makeover in Borivali, Kandivali, or Mumbai suburbs? Here is a transparent, realistic breakdown of electrical point costs, materials, and labor.',
-    coverImage: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=1000&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1000&q=80',
     keywords: [
       'flat rewiring cost Mumbai',
       '2BHK electrical wiring cost Borivali',

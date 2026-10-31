@@ -29,7 +29,7 @@ export default function Hero() {
               Book a Service
             </a>
             <a 
-              href="https://www.google.com/maps/place/R+K+Electricals/@19.2327822,72.8430844,17z" 
+              href="https://www.google.com/maps/search/?api=1&query=R+K+Electricals&query_place_id=ChIJrfSciiWx5zsR2Ktjso6Q7D0" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-underline text-pastelBrown-800 after:bg-pastelBrown-800 text-[9px]"

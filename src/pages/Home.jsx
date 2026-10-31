@@ -54,7 +54,7 @@ export default function Home() {
       { "@type": "AdministrativeArea", "name": "Mumbai" }
     ],
     "sameAs": [
-      "https://maps.google.com/?cid=10269094056248373710"
+      "https://maps.google.com/?cid=4462100273369951192"
     ]
   }
 
