@@ -47,13 +47,9 @@ export default function Login() {
   // Step 1: Verify credentials → trigger OTP email
   const onCredentials = async ({ email, password }) => {
     try {
-      const res = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-admin-otp`, {
+      const res = await fetch('/api/admin-otp-send', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': import.meta.env.VITE_SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       })
       const data = await res.json()
@@ -105,13 +101,9 @@ export default function Login() {
 
     setOtpLoading(true)
     try {
-      const res = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/verify-admin-otp`, {
+      const res = await fetch('/api/admin-otp-verify', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': import.meta.env.VITE_SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token: pendingToken, otp: code }),
       })
       const data = await res.json()

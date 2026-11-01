@@ -36,8 +36,24 @@ export function useCreateLead() {
     mutationFn: async (payload) => {
       checkRateLimit()
       if (!isSupabaseConfigured) return
-      const { error } = await supabase.from(TABLE).insert([payload])
-      if (error) throw error
+
+      // Local dev has no /api server — save straight to Supabase (no email)
+      if (import.meta.env.DEV) {
+        const { error } = await supabase.from(TABLE).insert([payload])
+        if (error) throw error
+        return
+      }
+
+      // Production: the Vercel function saves the lead and emails it to the shop
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'Could not submit your request. Please call or WhatsApp us.')
+      }
     },
     onSuccess: () => qc.invalidateQueries({ queryKey: [TABLE] }),
     onError:   (err) => toast.error(err.message),
