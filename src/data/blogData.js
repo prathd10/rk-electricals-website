@@ -1,5 +1,195 @@
 export const BLOG_POSTS = [
   {
+    id: 'how-to-choose-electrical-wire-mumbai-homes',
+    slug: 'how-to-choose-electrical-wire-mumbai-homes',
+    title: 'How to Choose the Right Electrical Wire for Your Home: Sizes, FR vs FRLS & ISI Marks',
+    metaTitle: 'Electrical Wire Guide: Sizes, FR vs FRLS for Mumbai Homes | R K Electricals',
+    metaDescription: 'Which wire size for lights, sockets, AC and geyser? FR vs FRLS vs HFFR explained, colour codes, and how to spot fake wire. A practical guide for Mumbai homeowners.',
+    category: 'Residential Wiring',
+    publishDate: 'November 2, 2026',
+    readTime: '6 min read',
+    author: 'Kirit Sheth (Founder & Lead Contractor)',
+    summary: 'The wire inside your walls decides how safe your home is for the next 25 years. Here is a simple guide to wire sizes, insulation types like FR and FRLS, colour codes, and how to make sure you are buying genuine copper wire.',
+    coverImage: 'https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=1000&q=80',
+    keywords: [
+      'which wire size for house wiring',
+      'FR vs FRLS wire difference',
+      'electrical wire shop Borivali',
+      '1.5 sq mm vs 2.5 sq mm wire',
+      'best wire for home wiring Mumbai'
+    ],
+    keyTakeaways: [
+      'Use copper wire for all house wiring — never aluminium inside the home.',
+      'Wire size depends on the load: thin wire on a heavy appliance overheats and can start a fire.',
+      'FRLS and HFFR wires give off less smoke in a fire — important in high-rise buildings where escape takes time.',
+      'Always check the ISI mark, the printed size and the coil length, and buy from a trusted shop.'
+    ],
+    content: [
+      {
+        heading: 'Why the Wire Matters More Than the Switches',
+        text: 'Switches, lights and fans can be replaced in minutes, but the wire inside your walls usually stays for 20 to 30 years. If it is undersized or poor quality, it heats up every time you run an AC or geyser, the insulation slowly hardens and cracks, and the risk of a short circuit grows every year. Choosing the right wire during a new installation or renovation is one of the most important safety decisions you will make.'
+      },
+      {
+        heading: '1. Common Wire Sizes and Where They Are Used',
+        text: 'For copper house wiring, 1.0 or 1.5 sq mm wire is commonly used for lights and fans, 2.5 sq mm for regular socket circuits, and 4 sq mm for heavy individual loads like air conditioners and geysers. The main supply from the meter to your distribution board is usually thicker, depending on your total load. These are typical sizes — the right size for each circuit also depends on the length of the run and the actual load, so your electrician should calculate it rather than guess.'
+      },
+      {
+        heading: '2. FR, FRLS and HFFR — What the Letters Mean',
+        text: 'FR (Flame Retardant) wire resists catching fire and stops flames spreading along the cable. FRLS (Flame Retardant Low Smoke) also gives off much less smoke when it burns. HFFR or ZHFR (Halogen Free Flame Retardant) goes further and does not release toxic, corrosive halogen gases. In a fire, smoke is often more dangerous than the flames themselves, so for flats in high-rise buildings — where residents may need several minutes to get out — FRLS or HFFR wire is a sensible choice.'
+      },
+      {
+        heading: '3. Follow the Colour Code',
+        text: 'Using the correct colours makes future repairs safer and faster. In Indian homes, red (or yellow or blue in three-phase supplies) is used for the live or phase wire, black for neutral, and green or green-yellow for earth. Avoid electricians who use one colour for everything — the next person who opens your switchboard will not know which wire is live.'
+      },
+      {
+        heading: '4. How to Avoid Fake or Undersized Wire',
+        text: 'Counterfeit and undersized wire is a real problem — a coil printed as 1.5 sq mm may actually contain much thinner copper. Check that the coil carries the ISI mark, that the size, brand and length are printed clearly along the insulation, and that the full coil length is there. Buy from an established electrical shop that stocks recognised brands, keep the bill, and avoid unusually cheap offers.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Can I use 1.5 sq mm wire for my AC?',
+        answer: 'It is not recommended. Air conditioners draw a high current for long periods, so they should have a dedicated circuit with thicker wire, typically 4 sq mm copper, along with a suitably rated MCB. Your electrician should confirm the size based on the AC rating and cable length.'
+      },
+      {
+        question: 'Is FRLS wire worth the extra cost?',
+        answer: 'For most Mumbai flats, especially in high-rise buildings, yes. The price difference is small compared to the total cost of a wiring job, and low-smoke wire can make a big difference to safety if there is ever a fire.'
+      },
+      {
+        question: 'Does R K Electricals sell electrical wire in Borivali?',
+        answer: 'Yes. Our shop in Borivali West stocks wires, switches, MCBs and fittings from trusted brands, and our electricians can advise on the right size for your job or carry out the wiring for you.'
+      }
+    ]
+  },
+  {
+    id: 'geyser-electrical-safety-guide-mumbai',
+    slug: 'geyser-electrical-safety-guide-mumbai',
+    title: 'Geyser Electrical Safety: Wiring, Earthing & Daily Habits for Mumbai Homes',
+    metaTitle: 'Geyser Electrical Safety Tips for Mumbai Homes | R K Electricals',
+    metaDescription: 'Using your geyser more this winter? Learn the right wiring, earthing and RCCB protection for water heaters, warning signs of a faulty geyser, and safe daily habits.',
+    category: 'Safety & Audits',
+    publishDate: 'November 2, 2026',
+    readTime: '5 min read',
+    author: 'R K Electricals Technical Team',
+    summary: 'Geysers combine high power, water and metal in the same small bathroom. As usage rises from November, here is how to make sure your water heater is wired, earthed and used safely.',
+    coverImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80',
+    keywords: [
+      'geyser safety tips',
+      'geyser installation electrician Mumbai',
+      'shock from geyser water',
+      'geyser earthing',
+      'water heater wiring Borivali'
+    ],
+    keyTakeaways: [
+      'A geyser should be on its own circuit with suitable wire, MCB and a 16A socket or direct connection.',
+      'Earthing and a 30mA RCCB are essential — water and metal make geyser faults especially dangerous.',
+      'Tingling from the tap or shower, a tripping RCCB or a burning smell are warning signs: stop using the geyser.',
+      'Mumbai\'s hard water builds up scale on the heating element, so regular servicing extends its life.'
+    ],
+    content: [
+      {
+        heading: 'Why Geysers Need Extra Care',
+        text: 'A typical storage geyser draws around 2 kW — as much as a small air conditioner — and it sits in the wettest room of the house, connected to metal pipes. If the heating element or wiring develops a fault and the earthing is weak, the water and pipes themselves can become live. That is why geyser installation deserves more attention than plugging in an ordinary appliance.'
+      },
+      {
+        heading: '1. The Right Circuit and Socket',
+        text: 'A geyser should have its own dedicated circuit from the distribution board, with copper wire sized for the load and its own MCB. It should connect through a good-quality 16A socket with a switch, or be wired directly through a double-pole switch. Never run a geyser from a 6A socket, an adaptor or an extension board — they are not built for continuous high current and can melt.'
+      },
+      {
+        heading: '2. Earthing and RCCB Protection',
+        text: 'The metal body of the geyser must be properly connected to earth, and the circuit should be protected by a 30mA RCCB, which cuts the supply in a fraction of a second if current leaks. In older Mumbai flats the earth wire to the bathroom is sometimes missing or disconnected after renovation, so it is worth having an electrician test earth continuity at the geyser point.'
+      },
+      {
+        heading: '3. Placement in the Bathroom',
+        text: 'Mount the geyser and its switch well away from direct water splashes, and keep the socket outside the shower area at a height where it stays dry. The geyser should be fixed firmly to a strong wall, with the safety (pressure relief) valve and drain in working condition. Have plumbing and electrical work done together so connections stay neat and dry.'
+      },
+      {
+        heading: '4. Warning Signs of a Faulty Geyser',
+        text: 'Stop using the geyser and call an electrician if you feel tingling when touching the tap, shower or geyser body; the RCCB or MCB trips when the geyser is on; you notice a burning smell, a melted or darkened socket, or sparking; the water is rusty; or the geyser makes loud popping or hissing sounds. These usually point to a failing element, a wiring fault or a problem with the thermostat or safety valve.'
+      },
+      {
+        heading: '5. Safe Daily Habits',
+        text: 'Switch the geyser on only as long as needed, or use a timer, rather than leaving it on all day. If you have any doubt about your earthing, switch it off before using the water. Mumbai\'s hard water leaves scale on the heating element, so getting the geyser serviced and descaled periodically keeps it efficient and reduces the chance of element failure.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Why do I feel a mild shock from the shower when the geyser is on?',
+        answer: 'Current is probably leaking from the heating element or wiring into the water or pipes, and the earthing is not taking it away safely. Switch off the geyser at once and have the geyser, its earthing and the circuit checked before using it again.'
+      },
+      {
+        question: 'Can a geyser be connected to a normal plug point?',
+        answer: 'Only to a dedicated 16A socket on a properly sized circuit. Regular 6A sockets, adaptors and extension boards are not safe for a geyser\'s continuous high current.'
+      },
+      {
+        question: 'Does R K Electricals install geysers and check bathroom earthing?',
+        answer: 'Yes. We install dedicated geyser circuits, sockets and RCCBs, and test earthing at bathroom points for homes in Borivali and nearby areas.'
+      }
+    ]
+  },
+  {
+    id: 'inverter-battery-sizing-guide-mumbai-homes',
+    slug: 'inverter-battery-sizing-guide-mumbai-homes',
+    title: 'Home Inverter & Battery Guide: How to Choose the Right Backup for Your Mumbai Flat',
+    metaTitle: 'Home Inverter & Battery Sizing Guide Mumbai | R K Electricals',
+    metaDescription: 'How big an inverter and battery do you need? Simple steps to calculate VA rating and backup hours, choose a battery type, and install your inverter safely in a Mumbai flat.',
+    category: 'Residential Wiring',
+    publishDate: 'November 2, 2026',
+    readTime: '6 min read',
+    author: 'R K Electricals Technical Team',
+    summary: 'Power cuts are less frequent in Mumbai than in many cities, but local faults, monsoon outages and work-from-home needs make backup power valuable. Here is how to size an inverter and battery correctly and install them safely.',
+    coverImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1000&q=80',
+    keywords: [
+      'inverter for home Mumbai',
+      'how to calculate inverter size',
+      'inverter battery backup hours',
+      'inverter installation Borivali',
+      'tubular battery vs lithium battery'
+    ],
+    keyTakeaways: [
+      'List only the essentials you need during a power cut — lights, fans, Wi-Fi, TV — and add up their wattage.',
+      'Inverter VA rating ≈ total load in watts ÷ 0.8.',
+      'Backup time depends on battery capacity: a 12V 150Ah battery stores about 1,800 Wh before losses.',
+      'Inverters should run selected circuits through proper wiring, and batteries need a ventilated spot away from flames.'
+    ],
+    content: [
+      {
+        heading: 'Do You Need an Inverter in Mumbai?',
+        text: 'Mumbai\'s power supply is more reliable than in many parts of India, but outages still happen — during heavy monsoon rain, cable faults in the locality, or maintenance work in your building. For families who work from home, have elderly members, or rely on medical equipment, a correctly sized inverter keeps lights, fans and internet running until power returns.'
+      },
+      {
+        heading: '1. Work Out Your Backup Load',
+        text: 'List what you actually need during a power cut and add up the wattage printed on each item. For example: six LED lights at 10 W (60 W), three ceiling fans at 75 W (225 W), a Wi-Fi router (15 W) and a TV (100 W) add up to about 400 W. Leave out heavy loads such as ACs, geysers, irons and microwaves — a normal home inverter is not designed for them.'
+      },
+      {
+        heading: '2. Choose the Inverter Rating (VA)',
+        text: 'Inverters are rated in VA, not watts. A simple rule is: VA rating ≈ total load in watts ÷ 0.8. For a 400 W load that works out to about 500 VA, so a 600 to 900 VA inverter gives comfortable headroom. Pure sine wave inverters are better for modern electronics, ceiling fans with regulators and computers, and run more quietly.'
+      },
+      {
+        heading: '3. Choose the Battery for Your Backup Time',
+        text: 'Battery energy is roughly voltage × capacity. A 12V 150Ah battery stores about 1,800 Wh; after inverter losses, that can run a 300 W load for around 4 to 5 hours, or a 400 W load for around 3 to 4 hours. Tubular lead-acid batteries are long-lasting and widely used but need periodic topping up with distilled water. Lithium batteries cost more but are lighter, need no water and last longer. Choose the capacity based on how long your typical outages last.'
+      },
+      {
+        heading: '4. Install It Safely',
+        text: 'The inverter should be wired into your distribution board so it powers only selected circuits, with a proper changeover, correctly sized cable to the battery and its own protection. Lead-acid batteries release small amounts of hydrogen while charging, so keep them in a ventilated place — not inside a closed cupboard or next to the kitchen stove — and on a stand off the floor. Avoid connecting the inverter through loose plug-in arrangements or extension boards.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Can I run my AC on a home inverter?',
+        answer: 'Not on a normal home inverter. ACs need far more power than a typical 600 to 1,500 VA inverter and battery can supply. Running an AC on backup needs a much larger system or a generator.'
+      },
+      {
+        question: 'How often should I top up an inverter battery?',
+        answer: 'For tubular lead-acid batteries, check the water level every one to two months and top up only with distilled water. Lithium batteries need no topping up.'
+      },
+      {
+        question: 'Does R K Electricals install home inverters in Borivali?',
+        answer: 'Yes. We help you size the inverter and battery for your home, wire it into selected circuits through your distribution board, and install it safely in homes and shops across Borivali and nearby areas.'
+      }
+    ]
+  },
+  {
     id: 'diwali-lighting-electrical-safety-mumbai-homes-societies',
     slug: 'diwali-lighting-electrical-safety-mumbai-homes-societies',
     title: 'Diwali Lighting Safety: Electrical Checklist for Mumbai Homes & Housing Societies',
