@@ -1,5 +1,199 @@
 export const BLOG_POSTS = [
   {
+    id: 'electrical-checklist-before-buying-resale-flat-mumbai',
+    slug: 'electrical-checklist-before-buying-resale-flat-mumbai',
+    title: 'Electrical Checklist Before Buying or Renting a Resale Flat in Mumbai',
+    metaTitle: 'Resale Flat Electrical Inspection Checklist Mumbai | R K Electricals',
+    metaDescription: 'Buying or renting a resale flat in Mumbai? Check the wiring, distribution board, earthing, meter load and switchboards before you pay. A practical electrical checklist.',
+    category: 'Residential Wiring',
+    publishDate: 'November 9, 2026',
+    readTime: '6 min read',
+    author: 'Kirit Sheth (Founder & Lead Contractor)',
+    summary: 'Old wiring is one of the most expensive surprises in a resale flat. Here is what to check — wiring age, distribution board, earthing, sanctioned load and the society meter room — before you sign, so you can budget or negotiate.',
+    coverImage: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1000&q=80',
+    keywords: [
+      'resale flat electrical inspection Mumbai',
+      'electrical checklist before buying flat',
+      'old flat wiring check Borivali',
+      'house inspection electrician Mumbai',
+      'flat electrical audit before purchase'
+    ],
+    keyTakeaways: [
+      'Find out how old the wiring is — very old buildings may still have aluminium or badly aged wiring.',
+      'A modern distribution board should have MCBs and an RCCB, not old rewireable fuses.',
+      'Check the sanctioned load on the meter is enough for the ACs and appliances you plan to use.',
+      'A licensed electrician\'s inspection before final payment can save you a rewiring bill — or give you room to negotiate.'
+    ],
+    content: [
+      {
+        heading: 'Why the Electrical Check Matters in Resale Flats',
+        text: 'Many resale flats in Mumbai are in buildings that are 20, 30 or even 40 years old. Fresh paint and new switch plates can hide wiring that was never designed for today\'s ACs, geysers and kitchen appliances. Rewiring a flat after you move in means breaking walls, repainting and living with the mess — so it pays to know the condition of the wiring before you commit.'
+      },
+      {
+        heading: '1. The Distribution Board',
+        text: 'Open the main board inside the flat. A healthy, modern setup has a main switch, individual MCBs for each circuit and an RCCB for shock protection. Warning signs include old porcelain rewireable fuses, a single switch controlling everything, loose or tangled wires, burn marks, or an RCCB that has been bypassed. Labelled circuits are a good sign that the last electrician did careful work.'
+      },
+      {
+        heading: '2. Age and Condition of the Wiring',
+        text: 'Ask the owner when the flat was last rewired. Remove one switchboard cover (with the power off) and look at the wire: it should be copper, with soft, flexible insulation in the correct colours. Brittle, cracked or discoloured insulation, aluminium conductors, or many joints taped together inside the boards suggest the wiring is near the end of its life.'
+      },
+      {
+        heading: '3. Earthing, Sockets and Switches',
+        text: 'Every socket should have a working earth connection — an electrician can test this quickly at each point. Check that switches do not feel warm, that there are no scorch marks around sockets, and that there are enough sockets in the kitchen and bedrooms. Long extension boards running around the flat usually mean there were too few sockets, and often that circuits are overloaded.'
+      },
+      {
+        heading: '4. Meter, Sanctioned Load and Name Transfer',
+        text: 'Look at the electricity bill for the sanctioned load and compare it with what you plan to run — two or three ACs, a geyser and kitchen appliances may need a load enhancement. Confirm there are no unpaid dues, and plan to transfer the connection to your name with the electricity distributor after purchase (in Borivali and most of the western suburbs, that is Adani Electricity).'
+      },
+      {
+        heading: '5. The Society Meter Room',
+        text: 'Ask to see the building\'s meter room. Rusty meter boxes, exposed cables, water seepage or dumped junk are signs that the society\'s common electrical maintenance has been neglected — which can affect every flat in the building. A society with a regular electrical AMC is usually a safer bet.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Should I get an electrician to inspect a flat before buying?',
+        answer: 'Yes. A licensed electrician can test earthing, check the distribution board and wiring condition, and tell you whether rewiring is needed. It costs little compared to the flat, and the findings can help you budget or negotiate the price.'
+      },
+      {
+        question: 'How do I know if a flat needs complete rewiring?',
+        answer: 'Common signs are old rewireable fuses, aluminium or brittle wiring, frequent MCB trips, warm switches, scorch marks, no earthing at sockets, and wiring that is more than 25 years old. An inspection will confirm whether partial repairs are enough.'
+      },
+      {
+        question: 'Does R K Electricals inspect resale flats in Borivali?',
+        answer: 'Yes. We inspect flats for buyers and tenants in Borivali, Kandivali, Dahisar and nearby areas, and give a clear written report of what needs fixing.'
+      }
+    ]
+  },
+  {
+    id: 'how-to-reduce-electricity-bill-mumbai-homes',
+    slug: 'how-to-reduce-electricity-bill-mumbai-homes',
+    title: 'How to Reduce Your Electricity Bill: Practical Tips for Mumbai Homes',
+    metaTitle: 'How to Reduce Electricity Bill in Mumbai Homes | R K Electricals',
+    metaDescription: 'Simple, proven ways to cut your home electricity bill in Mumbai — AC settings, BLDC fans, LED lighting, geyser timers, 5-star appliances and what to do if your bill suddenly jumps.',
+    category: 'Residential Wiring',
+    publishDate: 'November 9, 2026',
+    readTime: '6 min read',
+    author: 'R K Electricals Technical Team',
+    summary: 'In Mumbai\'s climate, ACs, fans and geysers make up most of a household\'s electricity use. These practical changes — many of them free — can noticeably lower your monthly bill.',
+    coverImage: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1000&q=80',
+    keywords: [
+      'how to reduce electricity bill Mumbai',
+      'save electricity at home tips',
+      'BLDC fan electricity saving',
+      'AC temperature to save electricity',
+      'high electricity bill reasons'
+    ],
+    keyTakeaways: [
+      'Set the AC to 24°C or higher — every degree cooler adds noticeably to its running cost.',
+      'BLDC ceiling fans use less than half the power of conventional fans.',
+      'LED lighting, geyser timers and switching off standby loads add up to real savings.',
+      'If your bill suddenly jumps without a change in usage, have your wiring and meter checked.'
+    ],
+    content: [
+      {
+        heading: 'Where Your Electricity Actually Goes',
+        text: 'In most Mumbai homes, the biggest consumers are air conditioners, ceiling fans running for long hours, geysers, refrigerators and kitchen appliances. Because residential tariffs charge a higher rate per unit as consumption rises, cutting back on the biggest loads can lower your bill by more than you might expect.'
+      },
+      {
+        heading: '1. Use Your AC Smarter',
+        text: 'The Bureau of Energy Efficiency recommends 24°C as the default AC temperature — lower settings make the compressor work much harder for little extra comfort. Use a ceiling fan along with the AC to spread cool air, keep doors and windows closed, clean the filters every few weeks, and get the AC serviced before summer. When buying, an inverter AC with a good star rating saves considerably over its life.'
+      },
+      {
+        heading: '2. Switch to BLDC Fans and LED Lights',
+        text: 'A conventional ceiling fan uses around 70 to 80 watts, while a BLDC fan uses roughly 28 to 35 watts at full speed. With fans running most of the day in Mumbai, replacing even a few can make a visible difference. Similarly, replace old tube lights and CFLs with LED fittings, which use far less power for the same light.'
+      },
+      {
+        heading: '3. Control the Geyser and Standby Loads',
+        text: 'Switch the geyser on only for as long as you need hot water, or fit a timer. Set its thermostat to a moderate temperature rather than the maximum. TVs, set-top boxes, chargers and microwaves keep drawing power on standby — switching them off at the socket or using switched extension boards helps.'
+      },
+      {
+        heading: '4. Choose Efficient Appliances',
+        text: 'Look for the BEE star label when buying ACs, refrigerators and other appliances — more stars means lower running costs. Keep the refrigerator a few inches away from the wall, check that door seals close tightly, and avoid putting hot food straight inside.'
+      },
+      {
+        heading: '5. If Your Bill Suddenly Jumps',
+        text: 'A sudden rise without a change in usage can point to an appliance fault (such as a failing geyser thermostat or AC compressor), current leakage from damaged wiring, or a meter issue. Compare your meter reading with the bill, switch off all loads and see whether the meter still moves, and have an electrician check your wiring. If the meter itself seems faulty, you can ask your electricity distributor to test it.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Does a BLDC fan really save electricity?',
+        answer: 'Yes. BLDC fans typically use less than half the power of conventional ceiling fans for similar airflow. In Mumbai, where fans run for many hours a day, the savings add up over the year.'
+      },
+      {
+        question: 'Why is my electricity bill high even though usage is the same?',
+        answer: 'Possible causes include a faulty appliance, earth leakage from damaged wiring, an incorrect meter reading or a faulty meter. Check the reading on the bill against your meter, then have your wiring inspected.'
+      },
+      {
+        question: 'Can R K Electricals help reduce my electricity usage?',
+        answer: 'Yes. We replace old fittings with LED lighting and BLDC fans, fix wiring faults that cause leakage, and can check your home for the biggest energy wasters.'
+      }
+    ]
+  },
+  {
+    id: 'smart-home-upgrades-existing-flats-mumbai',
+    slug: 'smart-home-upgrades-existing-flats-mumbai',
+    title: 'Smart Home Upgrades for Existing Mumbai Flats — Without Breaking Walls',
+    metaTitle: 'Smart Home Upgrades for Existing Flats Mumbai | R K Electricals',
+    metaDescription: 'Make your existing flat smart without rewiring: smart switches, plugs, lights, doorbells and locks. What needs a neutral wire, what is safe for heavy loads, and how to set it up securely.',
+    category: 'Design & Lighting',
+    publishDate: 'November 9, 2026',
+    readTime: '5 min read',
+    author: 'R K Electricals Project Studio',
+    summary: 'You do not need a renovation to get app and voice control at home. Here is what can be added to an existing Mumbai flat, what your wiring needs to support it, and how to keep it safe and secure.',
+    coverImage: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=1000&q=80',
+    keywords: [
+      'smart home Mumbai',
+      'smart switches for existing flat',
+      'home automation retrofit Borivali',
+      'smart switch neutral wire',
+      'voice control lights India'
+    ],
+    keyTakeaways: [
+      'Most smart switch modules need a neutral wire in the switchboard — many older boards do not have one.',
+      'Smart plugs are easy, but use a 16A-rated plug only for heavy appliances, and never overload it.',
+      'Smart bulbs should not be used on dimmers or fan regulators.',
+      'Change default passwords and keep the app and devices updated to stay secure.'
+    ],
+    content: [
+      {
+        heading: 'What You Can Add Without Rewiring',
+        text: 'Smart home technology has become affordable, and much of it fits into the switchboards and sockets you already have. With the right products you can control lights and fans from your phone or by voice, set schedules, check who is at the door, and get alerts — without chasing new wires through your walls.'
+      },
+      {
+        heading: '1. Smart Switches and Retrofit Modules',
+        text: 'Smart switch panels or small modules fitted behind your existing switches let you control lights and fans while keeping normal manual switching. The catch: most of them need a neutral wire in the switchboard, and many older Mumbai flats only have the phase wire running to the switches. An electrician can check your boards, confirm whether a neutral is available or can be added, and make sure the box is deep enough for the module.'
+      },
+      {
+        heading: '2. Smart Plugs',
+        text: 'Smart plugs are the simplest upgrade — plug them in and control whatever is connected. They are ideal for lamps, water purifiers, chargers and kitchen gadgets. For heavier appliances, only use a plug that is rated for the load and fits the correct socket, and never run a geyser, AC or heater through a small smart plug or an extension board.'
+      },
+      {
+        heading: '3. Smart Lights, Doorbells and Locks',
+        text: 'Smart LED bulbs and strips offer colour and brightness control from your phone — but do not install them on a dimmer or fan regulator circuit. Video doorbells let you see and talk to visitors from anywhere, and smart locks allow keyless entry with fingerprints or codes. Battery-powered models are easiest to fit; wired doorbells need a power point near the door.'
+      },
+      {
+        heading: '4. Make It Reliable and Secure',
+        text: 'Smart devices are only as good as your Wi-Fi, so make sure coverage reaches every room where you install them. Choose a single app or ecosystem where possible, and consider hub-based systems for larger homes. Change default passwords, use a strong Wi-Fi password, and keep the app and device firmware updated.'
+      }
+    ],
+    faqs: [
+      {
+        question: 'Do smart switches work in old flats?',
+        answer: 'Often yes, but most smart switch modules need a neutral wire in the switchboard. Many older flats do not have one at the switches, so an electrician should check your boards first.'
+      },
+      {
+        question: 'Can I control my AC or geyser with a smart plug?',
+        answer: 'Only with a smart plug or switch that is properly rated for that load and connected to a suitable socket. Small regular smart plugs can overheat with heavy appliances. For ACs, a smart IR remote is usually a safer option.'
+      },
+      {
+        question: 'Does R K Electricals install smart home devices in Borivali?',
+        answer: 'Yes. We check your existing wiring, install smart switches, sockets and lighting, and set up automation for homes in Borivali and nearby areas.'
+      }
+    ]
+  },
+  {
     id: 'how-to-choose-electrical-wire-mumbai-homes',
     slug: 'how-to-choose-electrical-wire-mumbai-homes',
     title: 'How to Choose the Right Electrical Wire for Your Home: Sizes, FR vs FRLS & ISI Marks',
